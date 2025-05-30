@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Download the Startup Toolkit</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+    .toolkit-container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 2em;
+      background-color: #fff7ef;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 0.6em;
+      width: 80%;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .download-link {
+      display: none;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+<div class="logo">
+<a href="index.html"><img alt="Sudhir Mehta Logo" class="logo-img" src="sudhir-logo.png"/></a>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Insights</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="toolkit.html">Toolkit</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<div class="toolkit-container">
+<h1>Founder Fit Toolkit</h1>
+<p>Thank you for reading <strong>Beyond the Garage</strong>!</p>
+<p>Enter your access code below to download the printable, fillable Startup Team Toolkit PDF.</p>
+<input id="codeInput" placeholder="Enter access code (e.g. WST2025)" type="text"/>
+<br/>
+<button onclick="verifyCode()">Unlock Download</button>
+<div class="download-link" id="downloadLink">
+      ✅ <a download="" href="Beyond the Garage - Toolkit.pdf">Click here to download the toolkit</a>
+</div>
+</div>
+<script>
+    function verifyCode() {
+      const code = document.getElementById("codeInput").value.trim().toUpperCase();
+      if (code === "WST2025") {
+        document.getElementById("downloadLink").style.display = "block";
+      } else {
+        alert("Invalid access code. Please check your book and try again.");
+      }
+    }
+  </script>
+</body>
+</html>
