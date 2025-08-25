@@ -184,3 +184,102 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
+
+/* Global Color Scheme Update */
+body {
+  background: linear-gradient(to bottom, #F9D57B, #89A88E); /* yellow to sage green */
+  color: #1D1D1D;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #AA1D22; /* burgundy red */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #B34A4A;
+}
+
+header, footer {
+  background-color: #F9D57B; /* warm yellow */
+  color: #1D1D1D;
+}
+
+button, .btn {
+  background-color: #B34A4A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover, .btn:hover {
+  background-color: #D16666;
+}
+
+
+
+/* Banner Section */
+.banner {
+  background: linear-gradient(to bottom, #F9D57B, #89A88E); /* yellow to sage green */
+  color: #1D1D1D;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #AA1D22; /* deep red */
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.banner h2 {
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #B34A4A;
+  margin-bottom: 1rem;
+}
+
+.banner hr {
+  border: none;
+  height: 3px;
+  background: #AA1D22;
+  width: 40%;
+  margin: 1rem auto;
+  border-radius: 3px;
+}
+
+/* === BeyondGPT+ Page Styling === */
+.beyondgptplus-wrapper {
+  background: linear-gradient(to bottom, #FDD76E 0%, #A3B88C 100%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.beyondgptplus-content {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.page-header.orange-bg {
+  background-color: #EB552B;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+.top-banner {
+  background-color: #f05a28;
+  padding: 20px 0;
+}
