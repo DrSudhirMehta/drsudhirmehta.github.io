@@ -174,3 +174,69 @@ body{
   max-width: 200px;                 /* scale image down */
   margin: 0 auto;                   /* center in its column */
 }
+/* ===== Compact Home Hero (smaller book image + less padding) ===== */
+.hero.hero--home {
+  padding: 36px 0;   /* reduce vertical whitespace */
+}
+
+.hero.hero--home .hero-visual img {
+  max-width: 200px;   /* shrink book cover a bit */
+  height: auto;
+}
+/* === Compact the Home hero even more === */
+.hero.hero--home{
+  padding: 28px 0;                /* was 36px */
+}
+
+/* tighten the grid and the column balance */
+.hero.hero--home .row{
+  grid-template-columns: 1.25fr 0.75fr;  /* less real estate for the image column */
+  gap: 16px;                              /* was 24px */
+  align-items: center;                    /* vertically center content */
+}
+
+/* make the card around the book slimmer */
+.hero.hero--home .hero-visual{
+  padding: 8px;                    /* was 16px */
+  background: rgba(255,255,255,.45);
+}
+
+/* keep the book modest */
+.hero.hero--home .hero-visual img{
+  max-width: 200px;                /* your current choice */
+  height: auto;
+}
+
+/* pull the next section up a bit */
+.hero.hero--home + .section{
+  padding-top: 20px;               /* was 40px from .section default */
+}
+
+/* optional: slightly tighter headline spacing */
+.hero.hero--home h1{ margin-bottom: 12px; }   /* trims ~10–12px */
+/* === Compact the Home hero even more === */
+.hero.hero--home{
+  padding: 28px 0;
+}
+
+.hero.hero--home .row{
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero.hero--home .hero-visual{
+  padding: 8px;
+  background: rgba(255,255,255,.45);
+}
+
+.hero.hero--home .hero-visual img{
+  max-width: 200px;
+  height: auto;
+}
+
+.hero.hero--home h1{ margin-bottom: 12px; }
+
+.hero.hero--home + .section{
+  padding-top: 20px;
+}
