@@ -1,46 +1,86 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>About | Dr. Sudhir Mehta</title>
-<link href="styles.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Sudhir Mehta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=6" />
 </head>
 <body>
-<nav class="top-nav" style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 10px 40px; box-sizing: border-box;">
-<a href="index.html" style="flex-shrink: 0;">
-<img alt="Sudhir Mehta Logo" src="sudhir-logo.png" style="height: 70px; background-color: white; padding: 5px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);"/>
-</a>
-<div style="flex-grow: 1; text-align: center;">
-<ul style="display: inline-flex; gap: 30px; list-style: none; margin: 0; padding: 0; font-size: 1.1rem;">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="blog.html">Insights</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="portfolio.html">Research &amp; Publications</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="toolkit.html">Toolkit</a></li><li><a href="beyondgpt-plus.html">BeyondGPT+</a></li></ul></div></nav>
-<header class="hero">
-<h1>About Me</h1>
-<p class="tagline">Strategist. Educator. FinTech Leader. Entrepreneurial Researcher.</p>
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
+        <img src="assets/logo.png" alt="" />
+        <span class="sr-only">Sudhir Mehta</span>
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="beyondgpt.html">BeyondGPT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-<main>
-<img alt="Conversation" src="Illustration_Q12.png" style="max-width:200px;display:block;margin:20px auto;"/>
-<section>
-<h2>Bio</h2>
-<p>Dr. Sudhir Mehta, DBA is a visionary strategist with decades of experience in fintech, software, and executive leadership. He helps founders and entrepreneurs build startup teams that actually work — not just sound smart.<br/><br/>
-With deep expertise across both startups and family businesses, Sudhir brings a hands-on, insight-driven approach to solving the toughest team-building challenges.<br/><br/>
-He blends research-backed insights with real-world practicality, making him a trusted advisor to early-stage ventures and scaling companies alike.<br/><br/>
-His work bridges the gap between academic theory and founder reality — delivering frameworks that are both thoughtful and actionable.</p>
-</section>
-<section>
-<h2>Teaching &amp; Speaking</h2>
-<p>Sudhir teaches FinTech, Entrepreneurship, and Digital Strategy for Family Firms. He also delivers workshops on leadership, succession, and innovation.</p>
-</section>
-<section class="book-to-brand-footer" style="text-align:center; padding: 40px 20px;">
-<h2>From Book to Brand</h2>
-<p>My journey from FinTech leader to researcher to author reflects one goal: empowering others to lead with clarity and purpose.</p>
-<a class="btn primary" href="index.html#book-to-brand" style="margin-top: 10px;">📘 Learn More</a>
-</section>
-</main><footer><p>© 2025 Dr. Sudhir Mehta | All rights reserved</p></footer></body></html>
+
+  <!-- Bright hero -->
+  <section class="hero">
+    <div class="container section">
+      <h1>About</h1>
+      <p class="lead">Professional yet human. Research-backed yet practical.</p>
+      <div class="split">
+        <div>
+          <img src="assets/SM_headshot.jpeg" alt="Dr. Sudhir Mehta, DBA — FinTech executive, researcher, and author" class="headshot" />
+        </div>
+        <div class="card">
+          <h3>Sudhir Mehta, DBA</h3>
+          <p>FinTech executive, researcher, and author of <em>Beyond the Garage</em>. I help founders and leaders build teams that actually work — aligning vision, trust, and execution.</p>
+          <p>My work blends leadership in financial services technology, doctoral research on entrepreneurial teams, and hands-on advisory with startups and scale-ups.</p>
+          <p class="muted">Focus areas: Founder dynamics • Team design • Culture at scale • FinTech transformation • Family business succession</p>
+          <p><a href="publications.html">See publications →</a> &nbsp; <a href="services.html">Advisory & workshops →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mint band -->
+  <section class="section bg-mint tinted">
+    <div class="container">
+      <h2>Mission & Approach</h2>
+      <p class="lead">Turn vision into execution through clarity, trust, and momentum.</p>
+      <div class="cards">
+        <div class="card"><h3>Clarity</h3><p>Define the work, roles, and rules of engagement.</p></div>
+        <div class="card"><h3>Trust</h3><p>Build psychological safety and aligned incentives.</p></div>
+        <div class="card"><h3>Momentum</h3><p>Ship value fast, learn faster, scale what works.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slate highlights -->
+  <section class="section bg-slate tinted">
+    <div class="container">
+      <h2>Where I Work</h2>
+      <div class="cards">
+        <div class="card"><h3>Startups</h3><p>Co-founders and early execs aligning around the first 50 hires.</p></div>
+        <div class="card"><h3>Scale-ups</h3><p>Operating cadence, culture at scale, leadership development.</p></div>
+        <div class="card"><h3>Investors</h3><p>Team due diligence and post-investment enablement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container inner"><small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small></div>
+    <img class="swoosh" src="assets/swoosh.png" alt="Swoosh design element" />
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,57 +1,67 @@
-
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Download the Startup Toolkit</title>
-<link href="styles.css" rel="stylesheet"/>
-<style>
-    .toolkit-container {
-      max-width: 600px;
-      margin: 80px auto;
-      padding: 2em;
-      background-color: #fff7ef;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    input[type="text"] {
-      padding: 0.6em;
-      width: 80%;
-      margin-bottom: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .download-link {
-      display: none;
-      margin-top: 1em;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toolkit — Practical, Research-Backed Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=6" />
 </head>
 <body>
-<div class="toolkit-container">
-<h1>Founder Fit Toolkit</h1>
-<p>Thank you for reading <strong>Beyond the Garage</strong>!</p>
-<p>Enter your access code below to download the printable, fillable Startup Team Toolkit PDF.</p>
-<input id="codeInput" placeholder="Enter access code (e.g. WST2025)" type="text"/>
-<br/>
-<button onclick="verifyCode()">Unlock Download</button>
-<div class="download-link" id="downloadLink">
-      ✅ <a download="" href="Beyond the Garage - Toolkit.pdf">Click here to download the toolkit</a>
-</div>
-<p style="margin-top: 20px;"><a class="btn secondary" href="index.html">← Back to Home</a></p></div>
-<script>
-    function verifyCode() {
-      const code = document.getElementById("codeInput").value.trim().toUpperCase();
-      if (code === "WST2025") {
-        document.getElementById("downloadLink").style.display = "block";
-      } else {
-        alert("Invalid access code. Please check your book and try again.");
-      }
-    }
-  </script>
-<footer><p>© 2025 Dr. Sudhir Mehta | All rights reserved</p></footer></body>
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
+        <img src="assets/logo.png" alt="" />
+        <span class="sr-only">Sudhir Mehta</span>
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="beyondgpt.html">BeyondGPT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="toolkit.html">Toolkit</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Startup Team Toolkit</h1>
+    <p class="lead">Downloadable and interactive tools you can use today.</p>
+  </div>
+</section>
+
+<section class="section bg-slate tinted">
+  <div class="container">
+    <div class="cards">
+      <div class="card"><h3>Founding Team Assessment</h3><p>Diagnose strengths, gaps, and blind spots (ETC/ESM).</p><a href="assets/tool-founding-team.pdf" target="_blank">Download PDF →</a></div>
+      <div class="card"><h3>Co-Founder Fit Quiz</h3><p>Fast alignment on roles, expectations, and conflict patterns.</p><a href="assets/tool-cofounder-fit.pdf" target="_blank">Download PDF →</a></div>
+      <div class="card"><h3>Co-Founder Agreement</h3><p>Template for equity, roles, and decision rights.</p><a href="assets/tool-cofounder-agreement.docx" target="_blank">Download DOCX →</a></div>
+      <div class="card"><h3>Investor Readiness</h3><p>Turn team strength into investor confidence.</p><a href="assets/tool-investor-readiness.pdf" target="_blank">Download PDF →</a></div>
+      <div class="card"><h3>Conflict Resolution</h3><p>Resolve disagreements constructively in 5 steps.</p><a href="assets/tool-conflict-resolution.pdf" target="_blank">Download PDF →</a></div>
+      <div class="card"><h3>Hiring Scorecard</h3><p>Define must-have attributes for first 10 hires.</p><a href="assets/tool-hiring-scorecard.xlsx" target="_blank">Download XLSX →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-gold tinted">
+  <div class="container" style="text-align:center;">
+    <h2>Want These as Interactive Tools?</h2>
+    <p class="lead">I can enable them inside BeyondGPT for guided, step-by-step use.</p>
+    <p><a class="cta" href="beyondgpt.html">See BeyondGPT</a></p>
+  </div>
+</section>
+
+<footer class="footer"><div class="container inner">
+  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
 </html>

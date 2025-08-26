@@ -1,43 +1,73 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Contact | Dr. Sudhir Mehta</title>
-<link href="styles.css" rel="stylesheet"/>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Work With Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=6" />
 </head>
 <body>
-<nav class="top-nav" style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 10px 40px; box-sizing: border-box;">
-<a href="index.html" style="flex-shrink: 0;">
-<img alt="Sudhir Mehta Logo" src="sudhir-logo.png" style="height: 70px; background-color: white; padding: 5px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);"/>
-</a>
-<div style="flex-grow: 1; text-align: center;">
-<ul style="display: inline-flex; gap: 30px; list-style: none; margin: 0; padding: 0; font-size: 1.1rem;">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="blog.html">Insights</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="portfolio.html">Research &amp; Publications</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="toolkit.html">Toolkit</a></li><li><a href="beyondgpt-plus.html">BeyondGPT+</a></li></ul></div></nav>
-<header class="hero">
-<h1>Contact</h1>
-<p class="tagline">Let's start a conversation.</p>
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
+        <img src="assets/logo.png" alt="" />
+        <span class="sr-only">Sudhir Mehta</span>
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="beyondgpt.html">BeyondGPT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-<main>
-<section>
-<h2>Contact Me</h2>
-<p>Phone: +1-704-232-3581</p>
-<p>Email: <a href="mailto:sudhirmehta0101@gmail.com">sudhirmehta0101@gmail.com</a></p>
+
+<section class="hero"><div class="container">
+  <h1>Contact</h1>
+  <p class="lead">Advisory, workshops, speaking, or media — I’d love to hear from you.</p>
+</div></section>
+
+<section class="section bg-mint tinted">
+  <div class="container">
+    <div class="split">
+      <div class="card">
+        <h3>Quick Note</h3>
+        <p>Email: <a href="mailto:SudhirMehta0101@gmail.com">SudhirMehta0101@gmail.com</a></p>
+        <p>LinkedIn: <a href="#" target="_blank">Connect on LinkedIn →</a></p>
+        <p class="muted">I typically respond within 1–2 business days.</p>
+      </div>
+      <div class="card">
+        <h3>Inquiry Form</h3>
+        <form method="POST" action="https://formspree.io/f/your-form-id">
+          <div style="display:grid; gap:12px;">
+            <input type="text" name="name" placeholder="Your name" required style="padding:12px; border-radius:12px; border:1px solid var(--border);" />
+            <input type="email" name="email" placeholder="Your email" required style="padding:12px; border-radius:12px; border:1px solid var(--border);" />
+            <input type="text" name="company" placeholder="Company (optional)" style="padding:12px; border-radius:12px; border:1px solid var(--border);" />
+            <select name="interest" style="padding:12px; border-radius:12px; border:1px solid var(--border);">
+              <option>Advisory</option><option>Workshop</option><option>Speaking</option><option>Media</option><option>Other</option>
+            </select>
+            <textarea name="message" rows="6" placeholder="How can I help?" style="padding:12px; border-radius:12px; border:1px solid var(--border);"></textarea>
+            <button type="submit" class="cta" style="border:none; cursor:pointer;">Send Message</button>
+          </div>
+        </form>
+        <p class="muted" style="margin-top:10px;">We’ll never share your information.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section>
-<h2>Send a Message</h2>
-<iframe frameborder="0" height="650" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSf4cN1-Hl53Pydeb8lbSFejt0V-sooMfUI6fvvlEMXStFF_Nw/viewform?embedded=true" width="100%">Loading…</iframe>
-</section>
-<section class="book-to-brand-footer" style="text-align:center; padding: 40px 20px;">
-<h2>From Book to Brand</h2>
-<p>If the ideas in <em>Winning Startup Teams</em> resonate, let’s connect and explore what we can build together.</p>
-<a class="btn primary" href="index.html#book-to-brand" style="margin-top: 10px;">📘 Learn More</a>
-</section>
-</main><footer><p>© 2025 Dr. Sudhir Mehta | All rights reserved</p></footer></body></html>
+
+<footer class="footer"><div class="container inner">
+  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
