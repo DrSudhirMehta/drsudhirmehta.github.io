@@ -1,69 +1,205 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BeyondGPT — Domain-Specific Advisor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeyondGPT — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <!-- Use your latest stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css?v=9" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a class="active" href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<section class="hero"><div class="container">
-  <span class="badge">Founder & Investor Tools</span>
-  <h1>BeyondGPT</h1>
-  <p class="lead">A domain-specific advisor built on my research and IP — not a general chatbot.</p>
-</div></section>
-
-<section class="section bg-slate tinted">
-  <div class="container">
-    <h2>Who It’s For</h2>
-    <div class="cards">
-      <div class="card"><h3>Founders & Co-Founders</h3><p>Resolve friction, align roles, move faster together.</p></div>
-      <div class="card"><h3>Executives</h3><p>Scale culture without breaking what makes you great.</p></div>
-      <div class="card"><h3>Investors & Advisors</h3><p>Evaluate team strength beyond the pitch deck.</p></div>
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
+          <img src="assets/logo.png" alt="" />
+          <span class="sr-only">Sudhir Mehta</span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a class="active" href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section bg-mint tinted">
-  <div class="container">
-    <h2>Use Cases</h2>
-    <div class="cards">
-      <div class="card"><h3>Startup Risk Diagnostic</h3><p>Identify people/process risks and get targeted next steps.</p></div>
-      <div class="card"><h3>Co-Founder Fit</h3><p>Assess compatibility, clarify roles, reduce conflict.</p></div>
-      <div class="card"><h3>Investor Lens</h3><p>Turn team strengths into investor confidence.</p></div>
-      <div class="card"><h3>Hiring Scorecard</h3><p>Define must-have traits for the first 10 hires.</p></div>
+  <!-- ===== HERO (Branded) ===== -->
+  <section class="hero hero--branded" aria-labelledby="bgpt-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">Domain-Specific • Trustworthy • Practical</span>
+          <h1 id="bgpt-hero-title">BeyondGPT — an advisor trained on your world.</h1>
+          <p class="lead">
+            An AI assistant tuned to your language, artifacts, and decisions — so teams get
+            <em>reliable answers</em> and <em>repeatable methods</em> instead of generic chat.
+          </p>
+          <p>
+            <a class="cta" href="contact.html">Pilot BeyondGPT</a>
+            &nbsp; <a href="toolkit.html">See the tools</a>
+          </p>
+        </div>
+
+        <!-- Visual -->
+        <div class="hero-visual">
+          <img
+            class="hero-book"
+            src="assets/Science of startup teams.png"
+            alt="Illustration: science of startup teams"
+            loading="eager"
+            decoding="sync"
+          />
+        </div>
+      </div>
     </div>
-    <p><a class="cta" href="contact.html">Request a demo</a></p>
-  </div>
-</section>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <!-- subtle background accents -->
+    <img class="hero-doodle doodle-left"  src="assets/Understand the founder.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Investors evaluate teams.png" alt="" aria-hidden="true" />
+  </section>
+
+  <!-- ===== What it is / who it's for ===== -->
+  <section class="section bg-mint tinted">
+    <div class="container">
+      <h2>What it is</h2>
+      <p class="lead">A focused “copilot” that uses your playbooks, policies, and templates — with auditability.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Domain-Tuned</h3>
+          <p>Grounded in your docs and vocabulary so answers map to how your organization actually works.</p>
+          <a href="toolkit.html">Use your artifacts →</a>
+        </div>
+        <div class="card">
+          <h3>Trust &amp; Guardrails</h3>
+          <p>Citation-first responses, red-flag detection, and safe defaults for regulated environments.</p>
+          <a href="blog.html#ai">Read about AI &amp; trust →</a>
+        </div>
+        <div class="card">
+          <h3>Workflow Ready</h3>
+          <p>Turns frameworks into checklists, scorecards, and drafts you can ship — not just chat.</p>
+          <a href="toolkit.html">See example outputs →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Use cases (doodle tiles) ===== -->
+  <section class="section" aria-labelledby="bgpt-usecases">
+    <div class="container">
+      <h2 id="bgpt-usecases">Where BeyondGPT Helps</h2>
+
+      <div class="active-tiles">
+        <!-- 1 -->
+        <a class="tile" href="services.html#entrepreneurship" aria-label="Founder alignment & co-founder fit">
+          <div class="thumb">
+            <img src="assets/Co-founder compatibility 3.jpeg" alt="Co-founder compatibility" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Founder Alignment</h3>
+            <p class="line-1">Surface assumptions fast.</p>
+            <p class="line-2">ETC lens + fit checks.</p>
+          </div>
+        </a>
+
+        <!-- 2 -->
+        <a class="tile" href="services.html#leadership" aria-label="Hiring & early team building">
+          <div class="thumb">
+            <img src="assets/First 10 hires v2.png" alt="First hires as bridge" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Hiring Scorecards</h3>
+            <p class="line-1">Outcome-based templates.</p>
+            <p class="line-2">From founder to first 10.</p>
+          </div>
+        </a>
+
+        <!-- 3 -->
+        <a class="tile" href="services.html#fintech" aria-label="FinTech transformation support">
+          <div class="thumb">
+            <img src="assets/Scaling without losing culture.png" alt="Scaling without losing culture" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Operating Cadence</h3>
+            <p class="line-1">Rituals, reviews, runbooks.</p>
+            <p class="line-2">Keeps strategy shipping.</p>
+          </div>
+        </a>
+
+        <!-- 4 -->
+        <a class="tile" href="blog.html#ai" aria-label="Responsible AI & risk">
+          <div class="thumb">
+            <img src="assets/Conflict & trust 3.png" alt="Conflict and trust" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Responsible AI</h3>
+            <p class="line-1">Citations &amp; checks.</p>
+            <p class="line-2">Bias &amp; risk prompts.</p>
+          </div>
+        </a>
+
+        <!-- 5 -->
+        <a class="tile" href="toolkit.html" aria-label="Templates & documents generation">
+          <div class="thumb">
+            <img src="assets/Equity Roles Trust 2.jpeg" alt="Equity roles trust" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Docs &amp; Templates</h3>
+            <p class="line-1">RFPs, PRDs, one-pagers.</p>
+            <p class="line-2">With your language.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works (simple 3 steps) ===== -->
+  <section class="section bg-gold tinted">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>1) Scope</h3>
+          <p>Pick the jobs to be done (e.g., hiring, policy Q&amp;A, customer docs). Decide on sources and guardrails.</p>
+        </div>
+        <div class="card">
+          <h3>2) Tune</h3>
+          <p>Load playbooks/policies, add examples, and test with real prompts. Tighten citations and style.</p>
+        </div>
+        <div class="card">
+          <h3>3) Pilot</h3>
+          <p>Start with one team and clear success criteria. Measure quality, speed, and confidence.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:16px;">
+        <a class="cta" href="contact.html">Start a pilot</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner">
+      <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+    </div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- bump cache to pick up new CSS tweaks -->
-  <link rel="stylesheet" href="assets/styles.css?v=7" />
+  <link rel="stylesheet" href="assets/styles.css?v=9" />
 </head>
 <body>
 
@@ -38,15 +38,16 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- ===== HERO (Branded with Book + Doodle) ===== -->
+  <section class="hero hero--branded" aria-labelledby="home-hero-title">
     <div class="container">
       <div class="row">
+        <!-- Text side -->
         <div>
           <span class="badge">FinTech • Entrepreneurship • Leadership</span>
-          <h1>Helping You Build Teams That Actually Work.</h1>
+          <h1 id="home-hero-title">Helping You Build Teams That Actually Work.</h1>
           <p class="lead">
-            Executive advisor, researcher, and author of <em>Beyond the Garage</em>.  
+            Executive advisor, researcher, and author of <em>Beyond the Garage</em>. 
             I help founders and leaders turn vision into execution — with clarity, trust, and momentum.
           </p>
           <p>
@@ -55,19 +56,22 @@
           </p>
         </div>
 
-        <div class="card">
-          <h3>Featured</h3>
-          <p class="muted">A rotating showcase of my latest post, talk, or tool.</p>
-          <div class="cards" style="grid-template-columns:1fr;">
-            <div class="card" style="box-shadow:none;">
-              <h3>PMI Agile Talk Recap</h3>
-              <p>What startups taught me about real agility — beyond theater.</p>
-              <a href="blog.html">Read the recap →</a>
-            </div>
-          </div>
+        <!-- Visual side -->
+        <div class="hero-visual">
+          <img
+            class="hero-book"
+            src="assets/Cover 2025-06-24.jpg"
+            alt="Beyond the Garage — front cover"
+            loading="eager"
+            decoding="sync"
+          />
         </div>
       </div>
     </div>
+
+    <!-- Subtle doodles as background accents -->
+    <img class="hero-doodle doodle-left"  src="assets/Garage myth.png"              alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Science of startup teams.png" alt="" aria-hidden="true" />
   </section>
 
   <!-- What I Do (reframed) -->
@@ -101,44 +105,105 @@
     </div>
   </section>
 
-  <!-- Where I Am Active (your new grid) -->
-  <section class="where-active section" aria-labelledby="where-active-title">
+  <!-- ===== WHERE I AM ACTIVE (Doodle Tiles) ===== -->
+  <section class="section" aria-labelledby="where-active-title">
     <div class="container">
       <h2 id="where-active-title">Where I Am Active</h2>
 
-      <div class="card-grid">
-        <a class="card" href="services.html#entrepreneurship">
-          <div class="icon">🚀</div>
-          <h3>Entrepreneurship &amp; Startups</h3>
-          <p class="line-1">Building teams that scale.</p>
-          <p class="line-2">Founder tools you can use.</p>
+      <div class="active-tiles">
+        <!-- 1: Entrepreneurship & Startups -->
+        <a class="tile" href="services.html#entrepreneurship" aria-label="Entrepreneurship & Startups">
+          <div class="thumb">
+            <img src="assets/Understand the founder.png" alt="Illustration: understanding the founder" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Entrepreneurship &amp; Startups</h3>
+            <p class="line-1">Building teams that scale.</p>
+            <p class="line-2">Founder tools you can use.</p>
+          </div>
         </a>
-        <a class="card" href="services.html#leadership">
-          <div class="icon">🌱</div>
-          <h3>Leadership &amp; Succession</h3>
-          <p class="line-1">Guiding smooth transitions.</p>
-          <p class="line-2">From startups to family firms.</p>
+
+        <!-- 2: Leadership & Succession -->
+        <a class="tile" href="services.html#leadership" aria-label="Leadership & Succession">
+          <div class="thumb">
+            <img src="assets/Founder to leader.png" alt="Illustration: journey from founder to leader" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Leadership &amp; Succession</h3>
+            <p class="line-1">Guiding smooth transitions.</p>
+            <p class="line-2">From startups to family firms.</p>
+          </div>
         </a>
-        <a class="card" href="services.html#fintech">
-          <div class="icon">💳</div>
-          <h3>FinTech &amp; Transformation</h3>
-          <p class="line-1">Transformation in banking &amp; payments.</p>
-          <p class="line-2">Shaping strategy that ships.</p>
+
+        <!-- 3: FinTech & Transformation -->
+        <a class="tile" href="services.html#fintech" aria-label="FinTech & Transformation">
+          <div class="thumb">
+            <img src="assets/Investors evaluate teams.png" alt="Illustration: investors evaluating teams" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>FinTech &amp; Transformation</h3>
+            <p class="line-1">Transformation in banking &amp; payments.</p>
+            <p class="line-2">Shaping strategy that ships.</p>
+          </div>
         </a>
-        <a class="card" href="blog.html#ai">
-          <div class="icon">🤖</div>
-          <h3>AI, Trust &amp; Ethics</h3>
-          <p class="line-1">Adopting AI responsibly.</p>
-          <p class="line-2">From risk to real value.</p>
+
+        <!-- 4: AI, Trust & Ethics -->
+        <a class="tile" href="blog.html#ai" aria-label="AI, Trust & Ethics">
+          <div class="thumb">
+            <img src="assets/Science of startup teams.png" alt="Illustration: science of startup teams" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>AI, Trust &amp; Ethics</h3>
+            <p class="line-1">Adopting AI responsibly.</p>
+            <p class="line-2">From risk to real value.</p>
+          </div>
         </a>
-        <a class="card" href="publications.html">
-          <div class="icon">📚</div>
-          <h3>Research &amp; Education</h3>
-          <p class="line-1">Evidence-based frameworks.</p>
-          <p class="line-2">Teaching that travels.</p>
+
+        <!-- 5: Research & Education -->
+        <a class="tile" href="publications.html" aria-label="Research & Education">
+          <div class="thumb">
+            <img src="assets/Equity Roles Trust 2.jpeg" alt="Illustration: equity, roles, trust" loading="lazy"/>
+          </div>
+          <div class="tile-body">
+            <h3>Research &amp; Education</h3>
+            <p class="line-1">Evidence-based frameworks.</p>
+            <p class="line-2">Teaching that travels.</p>
+          </div>
         </a>
       </div>
     </div>
+  </section>
+
+  <!-- ===== BOOK FEATURE (mint/gold band) ===== -->
+  <section class="feature-band book" id="book-feature" aria-labelledby="book-feature-title">
+    <div class="container feature-grid">
+      <div class="visual">
+        <figure class="book-cover" aria-label="Beyond the Garage book cover">
+          <img src="assets/Cover 2025-06-24.jpg" alt="Beyond the Garage — Building Teams That Actually Work (front cover)" loading="lazy"/>
+          <img class="back" src="assets/Back Cover 2025-06-24.jpg" alt="" aria-hidden="true" loading="lazy"/>
+        </figure>
+      </div>
+
+      <div class="content">
+        <span class="badge">New Book</span>
+        <h2 id="book-feature-title">Beyond the Garage</h2>
+        <p class="lead">Build startup teams that scale — without falling apart.</p>
+
+        <ul class="bullets">
+          <li>Research-backed playbook for founders and leaders</li>
+          <li>ETC Framework, co-founder tools, and real case studies</li>
+          <li>Checklists and worksheets you can use immediately</li>
+        </ul>
+
+        <div class="actions">
+          <a class="cta" href="book.html">Overview &amp; Table of Contents</a>
+          <a class="btn ghost" href="book.html#buy" aria-label="Buy or preview Beyond the Garage">Buy / Preview</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- faint swoosh accent behind content -->
+    <img class="swoosh-band" src="assets/Swoosh.png" alt="" aria-hidden="true" />
   </section>
 
   <!-- Gold CTA -->
@@ -155,11 +220,9 @@
     <div class="container inner">
       <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
     </div>
-    <img class="swoosh" src="assets/swoosh.png" alt="Swoosh design element" />
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

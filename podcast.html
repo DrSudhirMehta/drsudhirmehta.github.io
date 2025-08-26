@@ -1,54 +1,83 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Podcast — Coming Soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Podcast — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a class="active" href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<section class="hero"><div class="container">
-  <h1>Podcast</h1>
-  <p class="lead">Conversations at the intersection of startups, leadership, and culture.</p>
-</div></section>
-
-<section class="section bg-gold tinted">
-  <div class="container" style="text-align:center;">
-    <div class="card" style="display:inline-block; max-width:680px; text-align:center;">
-      <h3>Coming Soon</h3>
-      <p>Episodes are in the works. Want to be a guest or suggest a topic?</p>
-      <p><a class="cta" href="contact.html">Get in touch</a></p>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" /><span class="sr-only">Sudhir Mehta</span></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="active" href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- Branded Hero -->
+  <section class="hero hero--branded" aria-labelledby="pod-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">Coming Soon</span>
+          <h1 id="pod-hero-title">Conversations Beyond the Garage</h1>
+          <p class="lead">Founders, operators, and researchers on building teams that actually work.</p>
+          <p>
+            <a class="cta" href="contact.html">Get notified</a>
+            &nbsp; <a href="blog.html">Read recent notes</a>
+          </p>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/Pivot Exit Crash.png" alt="Illustration: pivots, exits, crashes" />
+        </div>
+      </div>
+    </div>
+    <img class="hero-doodle doodle-left"  src="assets/Investors evaluate teams.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Scaling without losing culture.png" alt="" aria-hidden="true" />
+  </section>
+
+  <!-- Coming Soon Card -->
+  <section class="section">
+    <div class="container">
+      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+        <div class="card">
+          <h3>Format</h3>
+          <p>30–40 minutes. One practical theme per episode: hiring, cadence, trust, founder transitions, and more.</p>
+          <p class="muted">Light editing, real stories, and frameworks you can try that week.</p>
+        </div>
+        <div class="card">
+          <h3>Want to be a guest?</h3>
+          <p>Have a story from the trenches — from garage to growth? I’d love to hear it.</p>
+          <a href="contact.html">Pitch a guest spot →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner"><small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small></div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

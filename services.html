@@ -1,75 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services — Advisory, Workshops, Speaking</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <!-- Use latest site styles -->
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <h1>Services</h1>
-    <p class="lead">Engagements tailored to your team’s reality — from founder alignment to scaling culture.</p>
-  </div>
-</section>
-
-<section class="section bg-mint tinted">
-  <div class="container">
-    <div class="cards">
-      <div class="card"><h3>Advisory</h3><p>Untangle friction, clarify rhythms, align incentives.</p><a class="cta" href="contact.html">Book a discovery call</a></div>
-      <div class="card"><h3>Workshops</h3><p>Co-founder fit, conflict resolution, first 10 hires, investor readiness.</p><a class="cta" href="contact.html">Request a workshop</a></div>
-      <div class="card"><h3>Speaking</h3><p>Keynotes on startup dynamics, agility beyond theater, leadership practice.</p><a class="cta" href="contact.html">Invite to speak</a></div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" /><span class="sr-only">Sudhir Mehta</span></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section bg-slate tinted">
-  <div class="container">
-    <h2>Popular Formats</h2>
-    <div class="cards">
-      <div class="card"><h3>Founder Offsite</h3><p>Design roles, decisions, and operating cadence in one day.</p></div>
-      <div class="card"><h3>Team Diagnostic</h3><p>Assess risks and unblock execution with concrete next steps.</p></div>
-      <div class="card"><h3>Investor Readiness</h3><p>Translate team strength into a confident, clear narrative.</p></div>
+  <!-- ===== Branded Hero ===== -->
+  <section class="hero hero--branded" aria-labelledby="services-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">Consulting • Workshops • Speaking</span>
+          <h1 id="services-hero-title">From friction to flow.</h1>
+          <p class="lead">Practical moves that align people, operating cadence, and customer outcomes — no theater.</p>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/Conflict & trust 3.png" alt="Illustration: conflict and trust" />
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+    <img class="hero-doodle doodle-left"  src="assets/First 10 hires v2.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Founder to leader.png"  alt="" aria-hidden="true" />
+  </section>
 
-<section class="section bg-gold tinted">
-  <div class="container" style="text-align:center;">
-    <h2>Let’s Tailor an Engagement</h2>
-    <p class="lead">Tell me where it hurts. We’ll design the simplest plan that moves the needle.</p>
-    <p><a class="cta" href="contact.html">Start the conversation</a></p>
-  </div>
-</section>
+  <!-- ===== Advisory & Workshops (mint band) ===== -->
+  <section class="section bg-mint tinted" id="advisory">
+    <div class="container">
+      <h2>Advisory &amp; Workshops</h2>
+      <p class="lead">Hands-on help to diagnose, align, and execute — quickly and repeatably.</p>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+      <div class="cards">
+        <div class="card">
+          <h3>Founder &amp; Team Alignment</h3>
+          <p>Surface assumptions, clarify roles &amp; decision rights, and move from conflict to trust.</p>
+          <a href="contact.html">Start a conversation →</a>
+        </div>
+
+        <div class="card">
+          <h3>Operating Cadence</h3>
+          <p>Lightweight rituals, reviews, and runbooks that keep strategy shipping without bureaucracy.</p>
+          <a href="contact.html">Design your cadence →</a>
+        </div>
+
+        <div class="card">
+          <h3>Hiring &amp; First 10</h3>
+          <p>Outcome-based scorecards and interviews that make early hires a bridge to the company.</p>
+          <a href="contact.html">Build the team →</a>
+        </div>
+
+        <div class="card">
+          <h3>Culture at Scale</h3>
+          <p>Translate values into behaviors, decisions, and systems as you grow — without losing your edge.</p>
+          <a href="contact.html">Plan the rollout →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Speaking (white) ===== -->
+  <section class="section" id="speaking">
+    <div class="container">
+      <h2>Speaking</h2>
+      <p class="lead">Keynotes and guest lectures where research meets the realities of operating.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Beyond the Garage</h3>
+          <p>Why teams break — and how aligned commitments, trust, and cadence change outcomes.</p>
+          <a href="book.html">See the book →</a>
+        </div>
+
+        <div class="card">
+          <h3>FinTech Transformation</h3>
+          <p>Strategy to shipped: operating models, culture change, and customer-centric execution.</p>
+          <a href="contact.html">Invite me to speak →</a>
+        </div>
+
+        <div class="card">
+          <h3>AI, Trust &amp; Ethics</h3>
+          <p>Adopting AI responsibly: citation-first answers, guardrails, and decision transparency.</p>
+          <a href="beyondgpt.html">Learn about BeyondGPT →</a>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:16px;">
+        <a class="cta" href="contact.html">Book a session</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner">
+      <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+    </div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

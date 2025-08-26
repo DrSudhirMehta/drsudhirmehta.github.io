@@ -1,62 +1,176 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Book — Beyond the Garage</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beyond the Garage — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+  <link rel="stylesheet" href="assets/styles.css?v=10" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="active" href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<section class="hero"><div class="container">
-  <h1><em>Beyond the Garage</em></h1>
-  <p class="lead">Building startup teams that actually work — a practical, research-backed playbook.</p>
-</div></section>
-
-<section class="section bg-slate tinted">
-  <div class="container">
-    <div class="cards">
-      <div class="card"><h3>Overview</h3><p>Real stories, practical frameworks, and tools to go from friction to flow.</p><a href="assets/book-onepager.pdf" target="_blank">Download the one-pager →</a></div>
-      <div class="card"><h3>Table of Contents</h3><p>From co-founder fit to scaling culture and investor expectations.</p><a href="assets/btg-toc.pdf" target="_blank">View sample ToC →</a></div>
-      <div class="card"><h3>Buy / Preview</h3><p>Amazon KDP (paperback/ebook) and global distribution.</p><a href="#" target="_blank">Amazon product page →</a></div>
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
+          <img src="assets/logo.png" alt="" />
+          <span class="sr-only">Sudhir Mehta</span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section bg-gold tinted">
-  <div class="container" style="text-align:center;">
-    <h2>Want a Bulk/Workshop Package?</h2>
-    <p class="lead">Pair books with a founder workshop or advisory sprint.</p>
-    <p><a class="cta" href="contact.html">Get details</a></p>
-  </div>
-</section>
+  <!-- Branded Hero -->
+  <section class="hero hero--branded" aria-labelledby="book-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">New Book</span>
+          <h1 id="book-hero-title">Beyond the Garage</h1>
+          <p class="lead">Build startup teams that scale — without falling apart.</p>
+          <p>
+            A research-backed, field-tested playbook for founders and leaders:
+            co-founder fit, roles and trust, first 10 hires, operating cadence,
+            and culture that scales.
+          </p>
+          <p>
+            <a class="cta" href="#overview">Read the Overview</a>
+            &nbsp; <a href="#buy">Buy / Preview</a>
+          </p>
+        </div>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+        <div class="hero-visual">
+          <figure class="book-cover" aria-label="Beyond the Garage book cover">
+            <img src="assets/Cover 2025-06-24.jpg" alt="Beyond the Garage — front cover" loading="eager" decoding="sync" />
+            <img class="back" src="assets/Back Cover 2025-06-24.jpg" alt="" aria-hidden="true" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <img class="hero-doodle doodle-left"  src="assets/Garage myth.png"              alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Science of startup teams.png" alt="" aria-hidden="true" />
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="section bg-mint tinted" id="overview" aria-labelledby="book-cards-title">
+    <div class="container">
+      <h2 id="book-cards-title">Inside the Book</h2>
+      <p class="lead">Clear frameworks, practical tools, and stories you’ll recognize from real teams.</p>
+
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>Overview</h3>
+          <p>Why startup teams break — and how founders can align vision, roles, and trust to build momentum that lasts beyond early product-market fit.</p>
+          <a href="#overview-details">Read the summary →</a>
+        </div>
+        <div class="card" id="toc">
+          <h3>Table of Contents</h3>
+          <p>Co-Founder Fit • Equity, Roles &amp; Trust • First 10 Hires • Operating Cadence • Culture at Scale • FinTech &amp; Transformation cases.</p>
+          <a href="#toc-details">See the chapters →</a>
+        </div>
+        <div class="card" id="buy">
+          <h3>Buy / Preview</h3>
+          <p>Browse sample pages or get the book in print/ebook. Worksheets and templates included via the downloadable toolkit.</p>
+          <a href="book.html#buy-options">Go to options →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview details (illustration swapped → Garage myth) -->
+  <section class="section" id="overview-details">
+    <div class="container">
+      <div class="split">
+        <div class="card">
+          <h3>The Big Idea</h3>
+          <p>
+            Great startups aren’t built by lone geniuses in garages — they’re built by small,
+            aligned teams who know how to navigate conflict, make crisp commitments, and
+            keep shipping. <em>Beyond the Garage</em> turns evidence into repeatable practice.
+          </p>
+          <p class="muted">
+            You’ll get diagnostics to spot misalignment early, frameworks to clarify roles and
+            decision rights, and simple rituals that keep momentum without bureaucracy.
+          </p>
+          <p><a href="#toc">Jump to the Table of Contents →</a></p>
+        </div>
+        <div class="about-illustration">
+          <img src="assets/Garage myth.png" alt="Illustration: Garage myth" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <section class="section bg-slate tinted" id="toc-details" aria-labelledby="toc-title">
+    <div class="container">
+      <h2 id="toc-title">Table of Contents</h2>
+    <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>Part I — Foundations</h3>
+          <p>Garage Myth • Science of Startup Teams • ETC Framework</p>
+        </div>
+        <div class="card">
+          <h3>Part II — Team Design</h3>
+          <p>Co-Founder Fit • Equity, Roles &amp; Trust • First 10 Hires</p>
+        </div>
+        <div class="card">
+          <h3>Part III — Operating</h3>
+          <p>Cadence • Reviews &amp; Runbooks • Scaling without Losing Culture</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:12px;">
+        <a class="cta" href="#buy-options">Buy / Preview</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Buy options -->
+  <section class="section" id="buy-options" aria-labelledby="buy-title">
+    <div class="container">
+      <h2 id="buy-title">Buy / Preview</h2>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>Amazon</h3>
+          <p>Print and Kindle editions.</p>
+          <a href="#" aria-disabled="true">Coming soon →</a>
+        </div>
+        <div class="card">
+          <h3>Preview PDF</h3>
+          <p>Sample chapters and figures.</p>
+          <a href="#" aria-disabled="true">Preview (soon) →</a>
+        </div>
+        <div class="card">
+          <h3>Companion Toolkit</h3>
+          <p>Worksheets and checklists from the book.</p>
+          <a href="assets/Beyond the Garage - Toolkit.pdf">Download toolkit →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container inner">
+      <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+    </div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

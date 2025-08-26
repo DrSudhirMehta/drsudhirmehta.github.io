@@ -6,41 +6,56 @@
   <title>About — Sudhir Mehta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+  <link rel="stylesheet" href="assets/styles.css?v=10" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" />
+          <span class="sr-only">Sudhir Mehta</span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Bright hero -->
-  <section class="hero">
-    <div class="container section">
-      <h1>About</h1>
-      <p class="lead">Professional yet human. Research-backed yet practical.</p>
-      <div class="split">
+  <!-- Branded Hero (single headshot here) -->
+  <section class="hero hero--branded" aria-labelledby="about-hero-title">
+    <div class="container">
+      <div class="row">
         <div>
-          <img src="assets/SM_headshot.jpeg" alt="Dr. Sudhir Mehta, DBA — FinTech executive, researcher, and author" class="headshot" />
+          <span class="badge">FinTech • Entrepreneurship • Leadership</span>
+          <h1 id="about-hero-title">Professional yet human. Research-backed yet practical.</h1>
+          <p class="lead">I help founders and leaders align vision, trust, and execution — and build teams that actually work.</p>
         </div>
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/SM_headshot.jpeg" alt="Dr. Sudhir Mehta headshot" />
+        </div>
+      </div>
+    </div>
+    <!-- subtle background accents -->
+    <img class="hero-doodle doodle-left"  src="assets/Understand the founder.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Founder to leader.png"      alt="" aria-hidden="true" />
+  </section>
+
+  <!-- Body (bio + illustration on right) -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <!-- Bio -->
         <div class="card">
           <h3>Sudhir Mehta, DBA</h3>
           <p>FinTech executive, researcher, and author of <em>Beyond the Garage</em>. I help founders and leaders build teams that actually work — aligning vision, trust, and execution.</p>
@@ -48,38 +63,18 @@
           <p class="muted">Focus areas: Founder dynamics • Team design • Culture at scale • FinTech transformation • Family business succession</p>
           <p><a href="publications.html">See publications →</a> &nbsp; <a href="services.html">Advisory & workshops →</a></p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Mint band -->
-  <section class="section bg-mint tinted">
-    <div class="container">
-      <h2>Mission & Approach</h2>
-      <p class="lead">Turn vision into execution through clarity, trust, and momentum.</p>
-      <div class="cards">
-        <div class="card"><h3>Clarity</h3><p>Define the work, roles, and rules of engagement.</p></div>
-        <div class="card"><h3>Trust</h3><p>Build psychological safety and aligned incentives.</p></div>
-        <div class="card"><h3>Momentum</h3><p>Ship value fast, learn faster, scale what works.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Slate highlights -->
-  <section class="section bg-slate tinted">
-    <div class="container">
-      <h2>Where I Work</h2>
-      <div class="cards">
-        <div class="card"><h3>Startups</h3><p>Co-founders and early execs aligning around the first 50 hires.</p></div>
-        <div class="card"><h3>Scale-ups</h3><p>Operating cadence, culture at scale, leadership development.</p></div>
-        <div class="card"><h3>Investors</h3><p>Team due diligence and post-investment enablement.</p></div>
+        <!-- Illustration (updated) -->
+        <div class="about-illustration">
+          <img src="assets/Understand the founder.png" alt="Illustration: Understand the founder" />
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container inner"><small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small></div>
-    <img class="swoosh" src="assets/swoosh.png" alt="Swoosh design element" />
+    <img class="swoosh" src="assets/Swoosh.png" alt="" />
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>

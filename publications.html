@@ -1,64 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Publications — Academic & Practitioner</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Publications — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <!-- Use your latest stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a class="active" href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<section class="hero"><div class="container">
-  <h1>Publications</h1>
-  <p class="lead">Peer-reviewed research and practitioner writing at the intersection of entrepreneurship, teams, and FinTech.</p>
-</div></section>
-
-<section class="section bg-mint tinted">
-  <div class="container">
-    <h2>Academic</h2>
-    <div class="cards">
-      <div class="card"><h3>Google Scholar</h3><p>Browse citations, co-authors, and related works.</p><a href="#" target="_blank">Open Google Scholar →</a></div>
-      <div class="card"><h3>Working Papers</h3><p>Preprints and datasets supporting current studies.</p><a href="#" target="_blank">View repository →</a></div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" />
+          <span class="sr-only">Sudhir Mehta</span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a class="active" href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section bg-slate tinted">
-  <div class="container">
-    <h2>Practitioner</h2>
-    <div class="cards">
-      <div class="card"><h3>Beyond the Garage</h3><p>Playbook for building startup teams that actually work.</p><a href="book.html">Book details →</a></div>
-      <div class="card"><h3>Articles & Essays</h3><p>Applied insights for founders, leaders, and investors.</p><a href="blog.html">Read the latest →</a></div>
+  <!-- Branded Hero -->
+  <section class="hero hero--branded" aria-labelledby="pubs-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">Academic • Practitioner</span>
+          <h1 id="pubs-hero-title">Publications</h1>
+          <p class="lead">
+            Research and writing at the intersection of entrepreneurship, leadership, and FinTech transformation.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/Investors evaluate teams.png" alt="Illustration: investors evaluate teams" />
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+    <!-- subtle background accents -->
+    <img class="hero-doodle doodle-left"  src="assets/Science of startup teams.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Co-founder breakup.png"       alt="" aria-hidden="true" />
+  </section>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- Academic Publications -->
+  <section class="section bg-mint tinted" aria-labelledby="academic-title">
+    <div class="container">
+      <h2 id="academic-title">Academic</h2>
+      <p class="lead">Peer-reviewed and scholarly work. Links open in a new tab.</p>
+
+      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+        <div class="card">
+          <h3>Entrepreneurial Success: Exploring the Interplay of Personality Traits and Co-Founder Team Dynamics</h3>
+          <p><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FAGwLGEAAAAJ&citation_for_view=FAGwLGEAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener">View on Google Scholar →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Familiness, Interests, and Opportunities: Reframing the Landscape of Family Business Succession</h3>
+          <p><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FAGwLGEAAAAJ&citation_for_view=FAGwLGEAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">View on Google Scholar →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practitioner Publications -->
+  <section class="section" aria-labelledby="practitioner-title">
+    <div class="container">
+      <h2 id="practitioner-title">Practitioner</h2>
+      <p class="lead">Applied pieces and practical frameworks for operators and founders.</p>
+
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>Beyond the Garage</h3>
+          <p>Research-backed playbook for building startup teams that actually work.</p>
+          <a href="book.html">Book page →</a>
+        </div>
+
+        <div class="card">
+          <h3>Toolkit</h3>
+          <p>Worksheets and checklists that translate frameworks into action.</p>
+          <a href="assets/Beyond the Garage - Toolkit.pdf">Download PDF →</a>
+        </div>
+
+        <div class="card">
+          <h3>Selected Posts</h3>
+          <p>Short, practical notes and sketches from the field.</p>
+          <a href="blog.html">Go to Blog →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner">
+      <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+    </div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

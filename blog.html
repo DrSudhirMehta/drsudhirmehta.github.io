@@ -1,54 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog — Notes & LinkedIn Highlights</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a class="active" href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<section class="hero"><div class="container">
-  <h1>Blog & Updates</h1>
-  <p class="lead">Curated notes, speaking recaps, and selected LinkedIn posts.</p>
-</div></section>
-
-<section class="section bg-slate tinted">
-  <div class="container">
-    <div class="cards">
-      <div class="card"><h3>PMI Agile Talk Recap</h3><p>What entrepreneurs taught me about agility beyond theater.</p><a href="#">Read more →</a></div>
-      <div class="card"><h3>LinkedIn Highlights</h3><p>A curated stream of recent posts and threads.</p><a href="#" target="_blank">Open LinkedIn profile →</a></div>
-      <div class="card"><h3>BeyondGPT Notes</h3><p>Behind-the-scenes progress shaping the advisor.</p><a href="#">Read more →</a></div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" /><span class="sr-only">Sudhir Mehta</span></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- Branded Hero -->
+  <section class="hero hero--branded" aria-labelledby="blog-hero-title">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="badge">Notes • Sketches • LinkedIn Highlights</span>
+          <h1 id="blog-hero-title">Field notes for founders & leaders.</h1>
+          <p class="lead">Short, practical ideas at the intersection of entrepreneurship, leadership, and FinTech transformation.</p>
+          <p>
+            <a class="cta" href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">
+              Follow on LinkedIn
+            </a>
+            &nbsp; <a href="contact.html">Suggest a topic</a>
+          </p>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/Who is your co-founder 3.jpg" alt="Illustration: co-founder choices" />
+        </div>
+      </div>
+    </div>
+    <img class="hero-doodle doodle-left"  src="assets/Conflict & trust 3.png" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/First 10 hires v2.png"   alt="" aria-hidden="true" />
+  </section>
+
+  <!-- Featured Posts -->
+  <section class="section bg-mint tinted" aria-labelledby="featured-title">
+    <div class="container">
+      <h2 id="featured-title">Featured</h2>
+      <p class="lead">Handpicked pieces that readers return to.</p>
+
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>From Founder to Leader</h3>
+          <p>Why some transitions work — and how to avoid the common traps.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+        </div>
+        <div class="card">
+          <h3>Hiring Your First 10</h3>
+          <p>Scorecards and interviews that build the company you want to become.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+        </div>
+        <div class="card">
+          <h3>Operating Cadence that Ships</h3>
+          <p>Lightweight rituals to keep strategy moving without bureaucracy.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent / Categories -->
+  <section class="section" aria-labelledby="recent-title">
+    <div class="container">
+      <h2 id="recent-title">Recent Highlights</h2>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <h3>Entrepreneurship & Startups</h3>
+          <p>Founder dynamics, team design, and early traction.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">See posts →</a>
+        </div>
+        <div class="card">
+          <h3>FinTech & Transformation</h3>
+          <p>From strategy to shipped products in banking & payments.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">See posts →</a>
+        </div>
+        <div class="card" id="ai">
+          <h3>AI, Trust & Ethics</h3>
+          <p>Reliable answers, guardrails, and decision transparency.</p>
+          <a href="https://www.linkedin.com/in/sudhircmehta/details/recent-activity/shares/" target="_blank" rel="noopener">See posts →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner"><small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small></div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

@@ -1,67 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Toolkit — Practical, Research-Backed Tools</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toolkit — Sudhir Mehta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=6" />
+
+  <!-- Use latest stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css?v=12" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-        <img src="assets/logo.png" alt="" />
-        <span class="sr-only">Sudhir Mehta</span>
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="beyondgpt.html">BeyondGPT</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a class="active" href="toolkit.html">Toolkit</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <h1>Startup Team Toolkit</h1>
-    <p class="lead">Downloadable and interactive tools you can use today.</p>
-  </div>
-</section>
-
-<section class="section bg-slate tinted">
-  <div class="container">
-    <div class="cards">
-      <div class="card"><h3>Founding Team Assessment</h3><p>Diagnose strengths, gaps, and blind spots (ETC/ESM).</p><a href="assets/tool-founding-team.pdf" target="_blank">Download PDF →</a></div>
-      <div class="card"><h3>Co-Founder Fit Quiz</h3><p>Fast alignment on roles, expectations, and conflict patterns.</p><a href="assets/tool-cofounder-fit.pdf" target="_blank">Download PDF →</a></div>
-      <div class="card"><h3>Co-Founder Agreement</h3><p>Template for equity, roles, and decision rights.</p><a href="assets/tool-cofounder-agreement.docx" target="_blank">Download DOCX →</a></div>
-      <div class="card"><h3>Investor Readiness</h3><p>Turn team strength into investor confidence.</p><a href="assets/tool-investor-readiness.pdf" target="_blank">Download PDF →</a></div>
-      <div class="card"><h3>Conflict Resolution</h3><p>Resolve disagreements constructively in 5 steps.</p><a href="assets/tool-conflict-resolution.pdf" target="_blank">Download PDF →</a></div>
-      <div class="card"><h3>Hiring Scorecard</h3><p>Define must-have attributes for first 10 hires.</p><a href="assets/tool-hiring-scorecard.xlsx" target="_blank">Download XLSX →</a></div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" /><span class="sr-only">Sudhir Mehta</span></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="beyondgpt.html">BeyondGPT</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="toolkit.html">Toolkit</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section bg-gold tinted">
-  <div class="container" style="text-align:center;">
-    <h2>Want These as Interactive Tools?</h2>
-    <p class="lead">I can enable them inside BeyondGPT for guided, step-by-step use.</p>
-    <p><a class="cta" href="beyondgpt.html">See BeyondGPT</a></p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero hero--branded hero--toolkit" aria-labelledby="toolkit-hero-title">
+    <div class="container">
+      <div class="row">
+        <!-- Left: text (add .col so the subtle card styling applies) -->
+        <div class="col">
+          <span class="badge">Practical • Research-Backed • Ready-to-Use</span>
+          <h1 id="toolkit-hero-title">Startup Toolkit</h1>
+          <p class="lead">Worksheets, scorecards, and checklists that make theory practical.</p>
+        </div>
 
-<footer class="footer"><div class="container inner">
-  <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
-</div><img class="swoosh" src="assets/swoosh.png" alt="" /></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+        <!-- Right: illustration -->
+        <div class="hero-visual">
+          <img class="hero-book" src="assets/Equity Roles Trust 2.jpeg" alt="Illustration: equity, roles, and trust" />
+        </div>
+      </div>
+    </div>
+
+    <!-- soft background doodles -->
+    <img class="hero-doodle doodle-left"  src="assets/Co-founder compatibility 3.jpeg" alt="" aria-hidden="true" />
+    <img class="hero-doodle doodle-right" src="assets/Conflict & trust 3.png"       alt="" aria-hidden="true" />
+  </section>
+
+  <!-- Toolkit Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="cards">
+        <div class="card">
+          <h3>Co-Founder Fit Quiz</h3>
+          <p>Gauge alignment with your partner early on using the ETC lens.</p>
+          <a href="#">Download (soon) →</a>
+        </div>
+
+        <div class="card">
+          <h3>Equity Split Guide</h3>
+          <p>Structured frameworks to clarify ownership, roles, and trust.</p>
+          <a href="#">Open guide (soon) →</a>
+        </div>
+
+        <div class="card">
+          <h3>Investor Readiness</h3>
+          <p>Assess traction, clarity, and team alignment before pitching.</p>
+          <a href="#">Checklist (soon) →</a>
+        </div>
+
+        <div class="card">
+          <h3>Conflict Resolution Worksheet</h3>
+          <p>Step-by-step prompts to resolve issues constructively.</p>
+          <a href="#">Get worksheet (soon) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container inner"><small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small></div>
+    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
