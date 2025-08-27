@@ -240,3 +240,93 @@ body{
 .hero.hero--home + .section{
   padding-top: 20px;
 }
+/* ===== Book hero re-balance (smaller book image) ===== */
+.hero.hero--book .hero-visual img {
+  max-width: 220px;   /* smaller than current ~320px */
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+/* ===== Book page: compact hero + tidy stacked covers ===== */
+.hero.hero--book{
+  padding: 34px 0;                 /* slightly tighter */
+}
+
+.hero.hero--book .row{
+  grid-template-columns: 1.55fr 0.85fr;  /* give text more room, image less */
+  gap: 16px;
+  align-items: center;
+}
+
+/* the white tile behind the book */
+.hero.hero--book .hero-visual{
+  position: relative;
+  padding: 14px;                    /* more breathing room so images don't “touch” edges */
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  max-width: 320px;                 /* keep the whole tile modest */
+  margin-left: auto;                /* hugs right column edge cleanly */
+  overflow: visible;                /* allow slight angle without clipping */
+}
+
+/* normalize both images first */
+.hero.hero--book .hero-visual img{
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* back cover (first image) — smaller + slight angle, stays INSIDE tile */
+.hero.hero--book .hero-visual img:first-child{
+  position: absolute;
+  left: 6px;                        /* was likely too negative; pull it inside */
+  top: 26px;
+  max-width: 170px;                 /* clearly smaller than front */
+  opacity: .65;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+/* front cover (second image) — main focus, smaller than before */
+.hero.hero--book .hero-visual img:last-child{
+  position: relative;
+  z-index: 2;
+  max-width: 220px;                 /* shrink the main cover */
+}
+/* --- Book hero: correct stacking + keep covers inside tile --- */
+.hero.hero--book .hero-visual{
+  position: relative;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  max-width: 320px;
+  margin-left: auto;
+  overflow: hidden;                 /* keep everything inside the tile */
+}
+
+/* normalize images */
+.hero.hero--book .hero-visual img{
+  display:block;
+  height:auto;
+  margin:0 auto;
+}
+
+/* BACK cover = the first <img> inside .hero-visual */
+.hero.hero--book .hero-visual img:nth-of-type(1){
+  position:absolute;
+  left:22px;                        /* ensure inside tile */
+  top:28px;
+  max-width:160px;
+  opacity:.6;
+  transform:rotate(-5deg);
+  z-index:1;                        /* behind the front cover */
+}
+
+/* FRONT cover = the second <img> inside .hero-visual */
+.hero.hero--book .hero-visual img:nth-of-type(2){
+  position:relative;
+  z-index:2;                        /* on top */
+  max-width:220px;                  /* keep modest */
+}
