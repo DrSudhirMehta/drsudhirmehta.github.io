@@ -1,228 +1,137 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sudhir Mehta — Home</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-  <!-- bump cache to pick up new CSS tweaks -->
-  <link rel="stylesheet" href="assets/styles.css?v=13" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sudhir C. Mehta — Scholar. Author. Speaker. Advisor.</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css?v=7"/>
 </head>
-<body>
+<body class="v2">
 
   <!-- Header / Nav -->
-  <header class="header">
-    <div class="container">
+  <header>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
+        <span>Sudhir C. Mehta</span>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a class="brand" href="index.html" aria-label="Sudhir Mehta — Home">
-          <img src="assets/logo.png" alt="" />
-          <span class="sr-only">Sudhir Mehta</span>
-        </a>
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="book.html">Book</a></li>
-          <li><a href="beyondgpt.html">BeyondGPT</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="toolkit.html">Toolkit</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="podcast.html">Podcast</a></li>
-          <li><a class="cta nav-cta" href="contact.html">Contact</a></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="book-publications.html">Book & Publications</a>
+        <a href="about-contact.html">About / Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO (Branded with Book + Doodle) ===== -->
-  <section class="hero hero--branded hero--home" aria-labelledby="home-hero-title">
-    <div class="container">
-      <div class="row">
-        <!-- Text side -->
-        <div>
-          <span class="badge">FinTech • Entrepreneurship • Leadership</span>
-          <h1 id="home-hero-title">Helping You Build Teams That Actually Work.</h1>
-          <p class="lead">
-            Executive advisor, researcher, and author of <em>Beyond the Garage</em>. 
-            I help founders and leaders turn vision into execution — with clarity, trust, and momentum.
-          </p>
-          <p>
-            <a class="cta" href="book.html">Explore the Book</a>
-            &nbsp; <a href="beyondgpt.html">Meet BeyondGPT</a>
-          </p>
-        </div>
-
-        <!-- Visual side -->
-        <div class="hero-visual">
-          <img
-            class="hero-book"
-            src="assets/Cover 2025-06-24.jpg"
-            alt="Beyond the Garage — front cover"
-            loading="eager"
-            decoding="sync"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- Subtle doodles as background accents -->
-    <img class="hero-doodle doodle-left"  src="assets/Garage myth.png"              alt="" aria-hidden="true" />
-    <img class="hero-doodle doodle-right" src="assets/Science of startup teams.png" alt="" aria-hidden="true" />
-  </section>
-
-  <!-- What I Do (reframed) -->
-  <section class="section bg-mint tinted">
-    <div class="container">
-      <h2>What I Do</h2>
-      <p class="lead">Strategist • Educator • Advisor • Author</p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Strategist</h3>
-          <p>Transformation in banking & payments, operating cadence, and culture that scales.</p>
-          <a href="services.html">See services →</a>
-        </div>
-        <div class="card">
-          <h3>Advisor</h3>
-          <p>Founder alignment, team design, and investor readiness — practical moves, not theater.</p>
-          <a href="services.html#entrepreneurship">How I advise →</a>
-        </div>
-        <div class="card">
-          <h3>Educator</h3>
-          <p>Teaching, workshops, and keynotes at the intersection of startups and leadership.</p>
-          <a href="services.html#leadership">Invite to speak →</a>
-        </div>
-        <div class="card">
-          <h3>Author</h3>
-          <p><em>Beyond the Garage</em> + tools that turn research into repeatable practice.</p>
-          <a href="book.html">About the book →</a>
-        </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Scholar. Author. Speaker. Advisor.</h1>
+      <p class="lead">Helping entrepreneurs, founders, and leaders build resilient teams that succeed.</p>
+      <!-- Replace your CTA row in the hero with: -->
+      <div class="cta-row">
+        <a class="cta primary" href="about-contact.html#speaking">Invite Me to Speak</a>
+        <a class="cta secondary" href="about-contact.html#consulting">Work With Me</a>
+        <a class="cta ghost" href="book-publications.html">Explore My Book</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHERE I AM ACTIVE (Doodle Tiles) ===== -->
-  <section class="section" aria-labelledby="where-active-title">
-    <div class="container">
-      <h2 id="where-active-title">Where I Am Active</h2>
+  <!-- Book + Latest Posts (mint) -->
+  <section class="section bg-mint">
+    <div class="wrap grid cols-2">
+      <div class="card">
+        <h2>Beyond the Garage</h2>
+        <div class="inline">
+          <img class="book-cover" src="assets/Cover 2025-06-24.jpg" alt="Beyond the Garage cover">
+          <div>
+            <p class="muted">A research-backed, field-tested playbook on founder fit, early hiring, and operating cadence.</p>
+            <p><a class="cta" href="book-publications.html">View Book & Toolkit</a></p>
+          </div>
+        </div>
+      </div>
 
-      <div class="active-tiles">
-        <!-- 1: Entrepreneurship & Startups -->
-        <a class="tile" href="services.html#entrepreneurship" aria-label="Entrepreneurship & Startups">
-          <div class="thumb">
-            <img src="assets/Understand the founder.png" alt="Illustration: understanding the founder" loading="lazy"/>
+      <div class="card">
+        <h2>Latest Insights</h2>
+        <div class="grid">
+          <div>
+            <strong><a href="../blog/first-10-hires.html">Your First 10 Hires: Slope over Intercept</a></strong><br>
+            <span class="muted">5 min read</span>
           </div>
-          <div class="tile-body">
-            <h3>Entrepreneurship &amp; Startups</h3>
-            <p class="line-1">Building teams that scale.</p>
-            <p class="line-2">Founder tools you can use.</p>
+          <div>
+            <strong><a href="../blog/founder-fit.html">Founder Fit Isn’t Vibes</a></strong><br>
+            <span class="muted">6 min read</span>
           </div>
-        </a>
-
-        <!-- 2: Leadership & Succession -->
-        <a class="tile" href="services.html#leadership" aria-label="Leadership & Succession">
-          <div class="thumb">
-            <img src="assets/Founder to leader.png" alt="Illustration: journey from founder to leader" loading="lazy"/>
+          <div>
+            <strong><a href="../blog/cadence-and-trust.html">Cadence Creates Trust</a></strong><br>
+            <span class="muted">4 min read</span>
           </div>
-          <div class="tile-body">
-            <h3>Leadership &amp; Succession</h3>
-            <p class="line-1">Guiding smooth transitions.</p>
-            <p class="line-2">From startups to family firms.</p>
-          </div>
-        </a>
-
-        <!-- 3: FinTech & Transformation -->
-        <a class="tile" href="services.html#fintech" aria-label="FinTech & Transformation">
-          <div class="thumb">
-            <img src="assets/Investors evaluate teams.png" alt="Illustration: investors evaluating teams" loading="lazy"/>
-          </div>
-          <div class="tile-body">
-            <h3>FinTech &amp; Transformation</h3>
-            <p class="line-1">Transformation in banking &amp; payments.</p>
-            <p class="line-2">Shaping strategy that ships.</p>
-          </div>
-        </a>
-
-        <!-- 4: AI, Trust & Ethics -->
-        <a class="tile" href="blog.html#ai" aria-label="AI, Trust & Ethics">
-          <div class="thumb">
-            <img src="assets/Science of startup teams.png" alt="Illustration: science of startup teams" loading="lazy"/>
-          </div>
-          <div class="tile-body">
-            <h3>AI, Trust &amp; Ethics</h3>
-            <p class="line-1">Adopting AI responsibly.</p>
-            <p class="line-2">From risk to real value.</p>
-          </div>
-        </a>
-
-        <!-- 5: Research & Education -->
-        <a class="tile" href="publications.html" aria-label="Research & Education">
-          <div class="thumb">
-            <img src="assets/Equity Roles Trust 2.jpeg" alt="Illustration: equity, roles, trust" loading="lazy"/>
-          </div>
-          <div class="tile-body">
-            <h3>Research &amp; Education</h3>
-            <p class="line-1">Evidence-based frameworks.</p>
-            <p class="line-2">Teaching that travels.</p>
-          </div>
-        </a>
+        </div>
+        <p style="margin-top:12px"><a class="cta alt" href="blog.html">View all posts</a></p>
       </div>
     </div>
   </section>
 
-  <!-- ===== BOOK FEATURE (mint/gold band) ===== -->
-  <section class="feature-band book" id="book-feature" aria-labelledby="book-feature-title">
-    <div class="container feature-grid">
-      <div class="visual">
-        <figure class="book-cover" aria-label="Beyond the Garage book cover">
-          <img src="assets/Cover 2025-06-24.jpg" alt="Beyond the Garage — Building Teams That Actually Work (front cover)" loading="lazy"/>
-          <img class="back" src="assets/Back Cover 2025-06-24.jpg" alt="" aria-hidden="true" loading="lazy"/>
-        </figure>
-      </div>
-
-      <div class="content">
-        <span class="badge">New Book</span>
-        <h2 id="book-feature-title">Beyond the Garage</h2>
-        <p class="lead">Build startup teams that scale — without falling apart.</p>
-
-        <ul class="bullets">
-          <li>Research-backed playbook for founders and leaders</li>
-          <li>ETC Framework, co-founder tools, and real case studies</li>
-          <li>Checklists and worksheets you can use immediately</li>
+  <!-- Speaking & Consulting (gold) -->
+  <section class="section bg-gold">
+    <div class="wrap grid cols-2">
+      <div class="card">
+        <h2>Speaking Engagements</h2>
+        <p>Keynotes and talks on co-founder fit, early team design, operating cadence, and culture at scale.</p>
+        <ul class="muted">
+          <li>Founder/VC events • MBA & Exec-Ed • Corporate offsites</li>
+          <li>Interactive Q&A, tailored industry stories</li>
         </ul>
-
-        <div class="actions">
-          <a class="cta" href="book.html">Overview &amp; Table of Contents</a>
-          <a class="btn ghost" href="book.html#buy" aria-label="Buy or preview Beyond the Garage">Buy / Preview</a>
-        </div>
+        <p><a class="cta" href="about-contact.html#speaking">Invite me to speak</a></p>
+      </div>
+      <div class="card">
+        <h2>Consulting Advisory</h2>
+        <p>Lightweight, practical advisory for founders and leaders—clarify roles, align incentives, and build momentum.</p>
+        <ul class="muted">
+          <li>Co-founder compatibility & equity/roles</li>
+          <li>First 10 hires & operating cadence</li>
+          <li>Conflict → commitment frameworks</li>
+        </ul>
+        <p><a class="cta" href="about-contact.html#consulting">Discuss an engagement</a></p>
       </div>
     </div>
-
-    <!-- faint swoosh accent behind content -->
-    <img class="swoosh-band" src="assets/Swoosh.png" alt="" aria-hidden="true" />
   </section>
 
-  <!-- Gold CTA -->
-  <section class="section bg-gold tinted">
-    <div class="container" style="text-align:center;">
-      <h2>Ready to Move from Friction to Flow?</h2>
-      <p class="lead">Let’s align your team around clear roles, real trust, and consistent execution.</p>
-      <p><a class="cta" href="contact.html">Book a discovery call</a></p>
+  <!-- Publications (mint) -->
+  <section class="section bg-mint">
+    <div class="wrap">
+      <div class="card">
+        <h2>Publications & Research</h2>
+        <ul>
+          <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li>Entrepreneurial Success: Interplay of Personality & Co-Founder Team Dynamics</li>
+          <li>Familiness, Interests, and Opportunities: Reframing the Landscape of Family Business Succession</li>
+        </ul>
+        <p class="muted">See more on the Book & Publications page.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container inner">
-      <small>© <span id="year"></span> Sudhir Mehta. All rights reserved.</small>
+  <!-- Footer with Projects + Swoosh -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-links mini">
+        <strong>Projects:</strong>
+        <a href="../beyondgpt.html">BeyondGPT</a> ·
+        <a href="../toolkit.html">Toolkit</a> ·
+        <a href="../services.html">Services</a> ·
+        <a href="../podcast.html">Podcast</a>
+      </div>
+      <div class="mini" style="margin-top:10px">
+        © <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta
+      </div>
     </div>
-    <img class="swoosh" src="assets/Swoosh.png" alt="Swoosh design element" />
+    <div class="swoosh">
+      <img src="assets/Swoosh.png" alt="Brand swoosh">
+    </div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

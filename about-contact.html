@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About / Contact — Sudhir C. Mehta</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css?v=12"/>
+</head>
+<body class="v2">
+
+  <header>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
+        <span>Sudhir C. Mehta</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="book-publications.html">Book & Publications</a>
+        <a href="about-contact.html">About / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About (mint) -->
+  <section class="section bg-mint" id="about">
+    <div class="wrap">
+      <h1 style="margin-top:0">About & Contact</h1>
+      <h2>About</h2>
+      <p>Sudhir C. Mehta is a scholar-practitioner in entrepreneurship and fintech, focused on how founders and teams succeed. With 30+ years as an operator and advisor, he blends research and practice to help leaders scale with clarity, trust, and cadence.</p>
+      <p class="muted">DBA • FinTech executive • Educator • Author of <em>Beyond the Garage</em></p>
+    </div>
+  </section>
+
+  <!-- Speaking (gold) -->
+  <section class="section bg-gold" id="speaking">
+    <div class="wrap">
+      <h2>Speaking</h2>
+      <p>Keynotes and guest lectures for founder/VC events, MBA & Exec-Ed, and corporate offsites. Topics: co-founder fit, early hiring, operating cadence, culture at scale.</p>
+      <p><a class="cta primary" href="#contact">Invite me to speak</a></p>
+    </div>
+  </section>
+
+  <!-- Consulting (mint) -->
+  <section class="section bg-mint" id="consulting">
+    <div class="wrap">
+      <h2>Consulting</h2>
+      <p>Lightweight advisory for founders and leadership teams — clarify roles and incentives, align on decision rights, and build momentum without bureaucracy.</p>
+      <p><a class="cta secondary" href="#contact">Discuss an engagement</a></p>
+    </div>
+  </section>
+
+  <!-- Contact (gold) with form -->
+  <section class="section bg-gold" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+
+      <div class="grid cols-2" style="align-items:start">
+        <!-- Form card -->
+        <div class="card">
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="name">Name<span aria-hidden="true" class="req">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email<span aria-hidden="true" class="req">*</span></label>
+                <input type="email" id="email" name="_replyto" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="org">Organization <span class="muted">(optional)</span></label>
+                <input type="text" id="org" name="organization" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="topic">I’m interested in…</label>
+                <select id="topic" name="topic">
+                  <option value="" selected>Select a topic</option>
+                  <option>Speaking</option>
+                  <option>Consulting</option>
+                  <option>Workshop/Advisory</option>
+                  <option>Research/Publication</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">How can I help?</label>
+              <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+
+            <!-- Honeypot (spam trap) -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"/>
+
+            <button type="submit" class="cta primary">Send message</button>
+            <div class="muted" style="margin-top:10px">I typically reply within 1–2 business days.</div>
+          </form>
+        </div>
+
+        <!-- Side info card -->
+        <div class="card">
+          <h3 style="margin-top:0">Ways to connect</h3>
+          <p>Email: <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a><br/>
+             LinkedIn: <a href="https://www.linkedin.com/in/sudhircmehta" target="_blank" rel="noopener">/in/sudhircmehta</a></p>
+          <p class="muted">Topics: Founder dynamics, operating cadence, first 10 hires, culture at scale, FinTech transformation, AI &amp; trust.</p>
+          <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
+          <h3 style="margin-top:0">Advisory • Workshops • Speaking</h3>
+          <p>Let’s work on the hard stuff. Tell me where you want momentum: founder alignment, hiring, cadence, culture, or FinTech transformation.</p>
+          <p class="muted">Prefer email? <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
+    </div>
+    <div class="swoosh">
+      <img src="assets/Swoosh.png" alt="Brand swoosh">
+    </div>
+  </footer>
+
+</body>
+</html>
