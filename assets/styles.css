@@ -1,332 +1,488 @@
-:root{
-  --mint:#C1D8C0; --gold:#F1D59A; --slate:#374151; --ink:#111827; --bg:#ffffff;
-  --link:#0EA5E9; --muted:#6B7280; --card:#F8FAFC; --border:#E5E7EB;
-  --radius:18px; --shadow:0 8px 24px rgba(0,0,0,.08);
+/* =========================================================
+   SudhirCMehta — v2 Minimal Theme (scoped to .v2)
+   ========================================================= */
+
+/* Brand tokens */
+.v2 {
+  --mint:#C1D8C0; --gold:#F1D59A;
+  --ink:#111827; --muted:#6B7280;
+  --bg:#ffffff; --card:#ffffff; --border:#E5E7EB;
+  --accent:#0a66c2; --radius:12px; --shadow:0 8px 24px rgba(0,0,0,.08);
+  color:var(--ink); background:var(--bg); line-height:1.6;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
-/* Site backdrop + card tone */
-body{background:#F9FAFB}
-.card{background:#fff}
+/* Basics */
+.v2 *{box-sizing:border-box}
+.v2 a{color:var(--accent);text-decoration:none}
+.v2 a:hover{text-decoration:underline}
+.v2 .wrap{max-width:1040px;margin:0 auto;padding:24px}
 
-/* Tinted section helpers */
-.bg-mint{background:rgba(193,216,192,.20)}
-.bg-gold{background:rgba(241,213,154,.20)}
-.bg-slate{background:rgba(55,65,81,.04)}
-.section.tinted{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+/* Header + Nav */
+.v2 header{
+  /* subtle mint wash */
+  background:linear-gradient(180deg, var(--mint) 0%, transparent 100%);
+  border-bottom:1px solid var(--border);
+}
+.v2 .brand{
+  display:flex; align-items:center; gap:16px; font-weight:700;
+}
+.v2 .brand img{ height:72px; width:auto; display:block; }
+.v2 .nav{display:flex;gap:16px;justify-content:flex-end;margin:8px 0 0}
+.v2 .nav a{color:var(--ink);padding:6px 8px;border-radius:8px}
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:"Roboto",system-ui,-apple-system,Segoe UI,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-  color:var(--slate); background:var(--bg); line-height:1.6
+/* Hero */
+.v2 .hero{
+  background:linear-gradient(180deg,var(--mint),var(--gold));
+  border-bottom:1px solid rgba(0,0,0,.06);
+  box-shadow:inset 0 -24px 40px rgba(0,0,0,.03);
+  padding:72px 0 48px;
+}
+.v2 .hero h1{
+  margin:0 0 10px; font-weight:800; letter-spacing:-.3px;
+  font-size:clamp(30px,5vw,46px);
+}
+.v2 .hero .lead{ font-size:clamp(16px,2.2vw,20px); color:#2f343b; margin:0 0 16px; }
+.v2 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Buttons */
+.v2 .cta{
+  display:inline-block; padding:10px 16px; border-radius:10px;
+  background:var(--accent); color:#fff; text-decoration:none;
+  transition:filter .2s ease;
+}
+.v2 .cta.alt{background:#111}
+.v2 .cta:hover{filter:saturate(1.1) brightness(1.02)}
+
+/* Sections, Cards, Grids */
+.v2 .section{padding:32px 0}
+.v2 h2{
+  margin:12px 0 10px; font-size:clamp(22px,3vw,28px);
+  position:relative; padding-left:12px;
+}
+.v2 h2::before{
+  content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px;
+  background:linear-gradient(180deg,var(--mint),var(--gold)); border-radius:4px;
 }
 
-/* Header / Nav */
-.header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);backdrop-filter:saturate(180%) blur(6px)}
-.header::after{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--mint),var(--gold))}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
-.nav a{text-decoration:none;color:var(--slate);padding:10px 12px;border-radius:10px;transition:background .2s,color .2s,box-shadow .2s;font-weight:500}
-.nav a:hover{background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.nav a.active{color:var(--ink);background:linear-gradient(90deg,rgba(193,216,192,.8),rgba(241,213,154,.8));box-shadow:0 4px 14px rgba(193,216,192,.35)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{height:56px;width:auto;display:block}           /* bigger logo */
-.brand span{display:none}                                  /* hide visible name on desktop */
-@media (max-width:480px){.brand img{height:48px}}
-
-.cta{padding:10px 14px;border-radius:12px;color:#111;font-weight:500;text-decoration:none;background:linear-gradient(90deg,var(--mint),var(--gold));border:1px solid rgba(0,0,0,.06)}
-.cta:hover{filter:saturate(1.05);opacity:.95}
-
-/* Softer nav CTA so it doesn't pull focus */
-.nav .nav-cta{background:linear-gradient(90deg,rgba(193,216,192,.65),rgba(241,213,154,.65));border:1px solid rgba(0,0,0,.06);box-shadow:0 2px 8px rgba(0,0,0,.06);padding:8px 12px}
-.nav .nav-cta:hover{filter:saturate(1.02);opacity:.98}
-
-/* ===== HERO (branded, tighter, with doodles) ===== */
-.hero.hero--branded{
-  position:relative; isolation:isolate; z-index:1;         /* isolates from sections below */
-  overflow:hidden;
-  padding:60px 0 12px;                                     /* tighter so tiles appear sooner */
-  background:
-    radial-gradient(1200px 600px at 0% -10%, rgba(193,216,192,.55), transparent 65%),
-    radial-gradient(1200px 600px at 100% -10%, rgba(241,213,154,.55), transparent 65%),
-    linear-gradient(180deg, rgba(193,216,192,.08), rgba(241,213,154,.08));
+/* OPTIONAL: gradient headings (uncomment to enable)
+.v2 .card h2, .v2 .section > h2 {
+  background: linear-gradient(90deg, var(--mint), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-.hero h1{font-weight:500;letter-spacing:-.5px;margin-top:4px}
-.hero .lead{font-weight:300}
-.hero p{max-width:760px;font-size:18px;color:var(--muted);margin:12px 0 22px}
+*/
 
-.hero .row{display:grid;grid-template-columns:1.4fr .9fr;gap:24px}
-@media (max-width:900px){.hero .row{grid-template-columns:1fr}}
-
-.hero-book{
-  width:clamp(200px,28vw,280px);height:auto;border-radius:14px;box-shadow:var(--shadow);display:block;margin:0 auto;position:relative;z-index:2
+.v2 .grid{display:grid;gap:16px}
+@media (min-width:780px){
+  .v2 .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .v2 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
 }
 
-/* Optional subtle card behind the book on desktop */
-.hero-visual{background:rgba(255,255,255,.55);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
-@media (max-width:900px){.hero-visual{background:transparent;border:0;padding:0;box-shadow:none}}
+.v2 .card{
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--card); box-shadow:var(--shadow); padding:16px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.v2 .card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+}
 
-.hero-doodle{position:absolute;width:clamp(160px,24vw,260px);opacity:.06;z-index:0;pointer-events:none;user-select:none;filter:saturate(.95) contrast(.98)}
-.doodle-left{bottom:-60px;left:-40px;transform:rotate(-2deg)}
-.doodle-right{top:0;right:-80px;transform:rotate(2deg)}
-.hero .container{position:relative;z-index:1}
+.v2 .muted{color:var(--muted)}
+.v2 .inline{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.v2 .book-cover{ max-width:200px; border-radius:8px; box-shadow:0 8px 20px rgba(0,0,0,.08); display:block; }
 
-/* Cards */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:30px 0 10px}
-@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
-@media (max-width:640px){.cards{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-.card h3{font-weight:400}
-.card p{font-weight:300;margin:0 0 14px;color:var(--slate)}
-.card a{color:var(--link);text-decoration:none}
+/* Branded section tints (apply via HTML classes) */
+.v2 .bg-mint{ background: color-mix(in srgb, var(--mint) 22%, white); }
+.v2 .bg-gold{ background: color-mix(in srgb, var(--gold) 22%, white); }
+/* Fallback if color-mix unsupported */
+@supports not (background: color-mix(in srgb, white, black)) {
+  .v2 .bg-mint{ background: rgba(193,216,192,0.20); }
+  .v2 .bg-gold{ background: rgba(241,213,154,0.20); }
+}
 
-/* Sections */
-.section{padding:40px 0}
-.section h2{font-weight:400;font-size:28px;color:var(--ink)}
-.section .lead{color:var(--muted);margin:0 0 18px;font-weight:300}
+/* Footer + full-width swoosh */
+.v2 footer{
+  background:linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%);
+  border-top:none; padding:32px 0 0; margin-top:28px;
+}
+.v2 .mini{font-size:14px;color:var(--muted)}
+.v2 .footer-links a{color:var(--muted);text-decoration:none;margin-right:10px}
 
-/* Footer + Swoosh */
-.footer{margin-top:60px;border-top:1px solid var(--border);position:relative;overflow:hidden;background:#fff}
-.footer .inner{padding:26px 0 88px;position:relative;z-index:2}
-.footer small{color:var(--muted);font-weight:300}
-.swoosh{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:100%;height:auto;opacity:.95;pointer-events:none;user-select:none;z-index:1}
+.v2 footer .swoosh{ width:100%; margin-top:16px; }
+.v2 footer .swoosh img{ display:block; width:100%; height:auto; }
 
-/* Utilities */
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
-@media (max-width:900px){.split{grid-template-columns:1fr}}
-.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(193,216,192,.35),rgba(241,213,154,.35));color:var(--ink);font-weight:600}
-.muted{color:var(--muted)}
-.headshot{width:100%;max-width:320px;border-radius:18px;border:1px solid var(--border);box-shadow:var(--shadow)}
-.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,1,1);white-space:nowrap;border:0}
+/* =======================
+   Book Motif Carousel
+   ======================= */
+.v2 .btg-carousel{
+  --mint:#C1D8C0; --gold:#F1D59A; --accent:#0070C0;
+  --radius:18px; --shadow:0 8px 24px rgba(0,0,0,.10);
+  --book-w:500px; --book-h:320px;
+  --content-w:440px; --content-h:260px;
+  --spine-gap:20px; --page-pad:14px;
+}
+.v2 .btg-carousel .frame{max-width:1180px;margin:0 auto;padding:clamp(16px,3vw,40px)}
+.v2 .btg-carousel .slide-card{
+  position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:clamp(14px,2.6vw,24px);background:linear-gradient(180deg,var(--mint),var(--gold));
+  display:flex;align-items:center;justify-content:center;min-height:calc(var(--book-h) + 64px)
+}
+.v2 .btg-carousel .swiper-slide:nth-child(even) .slide-card{
+  background:linear-gradient(180deg,var(--gold),var(--mint));
+}
+.v2 .btg-carousel .slide-card::before{
+  content:"";position:absolute;left:50%;top:50%;width:var(--book-w);height:var(--book-h);
+  transform:translate(-50%,-50%);
+  background:url("/assets/open-blank-pages-in-an-old-book-free-vector.jpg") center/contain no-repeat;
+  z-index:0;
+}
+.v2 .btg-carousel .page-grid{
+  position:absolute;left:50%;top:50%;width:var(--content-w);height:var(--content-h);
+  transform:translate(-50%,-50%);display:grid;grid-template-columns:1fr 1fr;
+  column-gap:var(--spine-gap);padding:var(--page-pad);z-index:1;box-sizing:border-box;background:transparent
+}
+.v2 .btg-carousel .page-left{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start}
+.v2 .btg-carousel .page-right{display:flex;align-items:center;justify-content:center}
+.v2 .btg-carousel .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+.v2 .btg-carousel .page-left h2{margin:0 0 8px;font-size:22px;line-height:1.25;color:#111;font-weight:700}
+.v2 .btg-carousel .page-left p{margin:0;font-size:16px;line-height:1.4;color:#222;font-style:italic}
+.v2 .btg-carousel .page-right img{
+  max-width:95%;max-height:95%;object-fit:contain;border-radius:10px;background:#fff;padding:6px;
+  box-shadow:0 6px 16px rgba(0,0,0,.10);display:block
+}
+.v2 .btg-carousel .swiper{width:100%}
+.v2 .btg-carousel .swiper-button-next,.v2 .btg-carousel .swiper-button-prev{color:#333;filter:drop-shadow(0 2px 8px rgba(0,0,0,.12))}
+.v2 .btg-carousel .swiper-pagination-bullet{background:#333;opacity:.5}
+.v2 .btg-carousel .swiper-pagination-bullet-active{background:#0070C0;opacity:1}
+@media (max-width:640px){
+  .v2 .btg-carousel{ --book-w:560px; --book-h:360px; --content-w:480px; --content-h:300px; --spine-gap:20px; --page-pad:16px; }
+  .v2 .btg-carousel .page-left h2{font-size:20px}
+  .v2 .btg-carousel .page-left p{font-size:15px}
+}
+@media (max-width:480px){
+  .v2 .btg-carousel{ --book-w:440px; --book-h:280px; --content-w:360px; --content-h:240px; --spine-gap:16px; --page-pad:14px; }
+  .v2 .btg-carousel .page-left h2{font-size:18px}
+  .v2 .btg-carousel .page-left p{font-size:14px}
+}
+/* Branded card tints - darker for more contrast */
+.v2 .bg-mint .card {
+  background: color-mix(in srgb, white 75%, var(--mint));
+}
+.v2 .bg-gold .card {
+  background: color-mix(in srgb, white 75%, var(--gold));
+}
 
-/* ---- Doodle Tile Grid (Home) ---- */
-.active-tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
-@media (max-width:1100px){.active-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:720px){.active-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:460px){.active-tiles{grid-template-columns:1fr}}
+/* Fallback if color-mix not supported */
+@supports not (background: color-mix(in srgb, white, black)) {
+  .v2 .bg-mint .card { background: rgba(193,216,192,0.35); }
+  .v2 .bg-gold .card { background: rgba(241,213,154,0.35); }
+}
 
-.tile{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.tile:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12);border-color:rgba(0,0,0,.08)}
-.tile .thumb{aspect-ratio:3/2;overflow:hidden;position:relative;background:linear-gradient(180deg,rgba(193,216,192,.35),rgba(241,213,154,.35))}
-.tile .thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(.98);transition:transform .35s ease,filter .35s ease}
-.tile:hover .thumb img{transform:scale(1.03);filter:saturate(1)}
-.tile .tile-body{padding:14px 14px 16px}
-.tile h3{margin:0 0 6px;font-size:16px;font-weight:500;color:var(--ink)}
-.tile p{margin:0;font-size:14px;color:var(--muted);line-height:1.4}
-.tile .line-2{max-height:0;opacity:0;transform:translateY(4px);transition:max-height .3s ease,opacity .25s ease,transform .25s ease}
-.tile:hover .line-2,.tile:focus-within .line-2{max-height:42px;opacity:1;transform:translateY(0)}
+/* Stronger shadow + lift */
+.v2 .card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* darker shadow */
+  transition: transform .2s ease, box-shadow .2s ease;
+}
 
-/* ===== Book Feature band ===== */
-.feature-grid{display:grid;gap:28px;grid-template-columns:1fr .8fr;align-items:center}
-@media (max-width:900px){.feature-grid{grid-template-columns:1fr}}
-.feature-band .visual{display:flex;justify-content:center}
+.v2 .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.22); /* more dramatic hover */
+}
+/* --- Card Background + Shadow (stronger) --- */
+.v2 .bg-mint .card {
+  background: color-mix(in srgb, white 75%, var(--mint));
+}
+.v2 .bg-gold .card {
+  background: color-mix(in srgb, white 75%, var(--gold));
+}
+@supports not (background: color-mix(in srgb, white, black)) {
+  .v2 .bg-mint .card { background: rgba(193,216,192,0.35); }
+  .v2 .bg-gold .card { background: rgba(241,213,154,0.35); }
+}
 
-.book-cover{position:relative;width:min(280px,100%);margin:0}
-.book-cover img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:var(--shadow)}
-.book-cover img:first-child{position:relative;z-index:1}
-.book-cover .back{position:absolute;z-index:0;opacity:.75;width:82%;left:-8%;top:8%;transform:rotate(-4deg);filter:grayscale(.15) saturate(.95) brightness(.98);pointer-events:none;user-select:none}
+.v2 .card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.v2 .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.22);
+}
 
-/* Faint swoosh watermark behind the band */
-.swoosh-band{position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);width:1200px;max-width:95vw;opacity:.12;pointer-events:none;user-select:none}
+/* --- Accent Style 1: Gradient top border strip --- */
+.v2 .card {
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(90deg, var(--mint), var(--gold)) 1;
+}
 
-/* Print: let doodles show slightly richer in exported PDFs */
-@media print{ .hero-doodle{opacity:.12} }
-/* ===== About page layout options ===== */
+/* --- Accent Style 2: Gradient heading text --- */
+.v2 .card h2 {
+  background: linear-gradient(90deg, var(--mint), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Stronger blog post title color */
+.v2 .post h2 {
+  color: #0b0b0b; /* darker than var(--ink) */
+  font-weight: 800;
+}
 
-/* Option A: full-width bio card */
-.split.fullwidth{ grid-template-columns:1fr; }
-.split.fullwidth .card{ grid-column:1 / -1; }
+/* Optional: make blog links darker too */
+.v2 .post h2 a {
+  color: #0b0b0b;
+  text-decoration: none;
+}
+.v2 .post h2 a:hover {
+  text-decoration: underline;
+}
+/* --- Blog titles: force dark, readable on tinted cards --- */
+.v2 .post h2,
+.v2 .post h2 a,
+.v2 .post h2 a:visited {
+  color: #0b0b0b !important;   /* win over global link color */
+  -webkit-text-fill-color: #0b0b0b !important; /* defeat any gradient text */
+  text-decoration: none;
+  font-weight: 800;
+}
+.v2 .post h2 a:hover { text-decoration: underline; }
 
-/* Option B: bio + illustration */
-.about-illustration{
-  background:linear-gradient(180deg, rgba(193,216,192,.18), rgba(241,213,154,.18));
+/* --- Restrict gradient heading style to NON-blog cards --- */
+/* If you enabled the gradient heading earlier for all .card h2, swap it for this selector: */
+.v2 .card:not(.post) h2 {
+  background: linear-gradient(90deg, var(--mint), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Contact form */
+.v2 .contact-form .row{display:grid;gap:14px}
+@media(min-width:720px){ .v2 .contact-form .row{grid-template-columns:1fr 1fr} }
+
+.v2 .contact-form .field{display:flex;flex-direction:column;gap:6px}
+.v2 .contact-form label{font-weight:600}
+.v2 .contact-form .req{color:#b91c1c;margin-left:4px}
+
+.v2 .contact-form input[type="text"],
+.v2 .contact-form input[type="email"],
+.v2 .contact-form select,
+.v2 .contact-form textarea{
   border:1px solid var(--border);
-  border-radius:16px;
-  padding:16px;
-  box-shadow:var(--shadow);
-  display:grid;
-  place-items:center;
+  border-radius:10px;
+  padding:10px 12px;
+  background:#fff;
+  font:inherit;
+  color:var(--ink);
+  outline:none;
+  transition:border-color .15s ease, box-shadow .15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.about-illustration img{
-  width:100%;
-  max-width:420px;
-  height:auto;
-  display:block;
-  filter:saturate(.98) contrast(.98);
+.v2 .contact-form textarea{resize:vertical}
+.v2 .contact-form input:focus,
+.v2 .contact-form select:focus,
+.v2 .contact-form textarea:focus{
+  border-color:#99b59a; /* mint-ish focus */
+  box-shadow:0 0 0 3px rgba(193,216,192,.35);
 }
-@media (max-width:900px){
-  /* On mobile, stack nicely */
-  .about-illustration{ margin-top:16px; }
+.v2 .contact-form .hp{position:absolute !important;left:-9999px !important;opacity:0 !important}
+/* Compact section padding for shorter content blocks */
+#about.section,
+#speaking.section,
+#consulting.section {
+  padding: 20px 0; /* tighter than the default 32px */
 }
-/* ===== Toolkit hero re-balance (smaller image, wider text) ===== */
-.hero.hero--toolkit .row{
-  grid-template-columns: 1.6fr 0.8fr; /* more space for text, less for image */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About / Contact — Sudhir C. Mehta</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css?v=12"/>
+</head>
+<body class="v2">
+
+  <header>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
+        <span>Sudhir C. Mehta</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="book-publications.html">Book & Publications</a>
+        <a href="about-contact.html">About / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About (mint) -->
+  <section class="section bg-mint" id="about">
+    <div class="wrap">
+      <h1 style="margin-top:0">About & Contact</h1>
+      <h2>About</h2>
+      <p>Sudhir C. Mehta is a scholar-practitioner in entrepreneurship and fintech, focused on how founders and teams succeed. With 30+ years as an operator and advisor, he blends research and practice to help leaders scale with clarity, trust, and cadence.</p>
+      <p class="muted">DBA • FinTech executive • Educator • Author of <em>Beyond the Garage</em></p>
+    </div>
+  </section>
+
+  <!-- Speaking (gold) -->
+  <section class="section bg-gold" id="speaking">
+    <div class="wrap">
+      <h2>Speaking</h2>
+      <p>Keynotes and guest lectures for founder/VC events, MBA & Exec-Ed, and corporate offsites. Topics: co-founder fit, early hiring, operating cadence, culture at scale.</p>
+      <p><a class="cta" href="#contact">Invite me to speak</a></p>
+    </div>
+  </section>
+
+  <!-- Consulting (mint) -->
+  <section class="section bg-mint" id="consulting">
+    <div class="wrap">
+      <h2>Consulting</h2>
+      <p>Lightweight advisory for founders and leadership teams — clarify roles and incentives, align on decision rights, and build momentum without bureaucracy.</p>
+      <p><a class="cta alt" href="#contact">Discuss an engagement</a></p>
+    </div>
+  </section>
+
+  <!-- Contact (gold) with form -->
+  <section class="section bg-gold" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+
+      <div class="grid cols-2" style="align-items:start">
+        <!-- Form card -->
+        <div class="card">
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="name">Name<span aria-hidden="true" class="req">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email<span aria-hidden="true" class="req">*</span></label>
+                <input type="email" id="email" name="_replyto" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="org">Organization <span class="muted">(optional)</span></label>
+                <input type="text" id="org" name="organization" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="topic">I’m interested in…</label>
+                <select id="topic" name="topic">
+                  <option value="" selected>Select a topic</option>
+                  <option>Speaking</option>
+                  <option>Consulting</option>
+                  <option>Workshop/Advisory</option>
+                  <option>Research/Publication</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">How can I help?</label>
+              <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+
+            <!-- Honeypot (spam trap) -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"/>
+
+            <button type="submit" class="cta">Send message</button>
+            <div class="muted" style="margin-top:10px">I typically reply within 1–2 business days.</div>
+          </form>
+        </div>
+
+        <!-- Side info card -->
+        <div class="card">
+          <h3 style="margin-top:0">Ways to connect</h3>
+          <p>Email: <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a><br/>
+             LinkedIn: <a href="https://www.linkedin.com/in/sudhircmehta" target="_blank" rel="noopener">/in/sudhircmehta</a></p>
+          <p class="muted">Topics: Founder dynamics, operating cadence, first 10 hires, culture at scale, FinTech transformation, AI &amp; trust.</p>
+          <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
+          <h3 style="margin-top:0">Advisory • Workshops • Speaking</h3>
+          <p>Let’s work on the hard stuff. Tell me where you want momentum: founder alignment, hiring, cadence, culture, or FinTech transformation.</p>
+          <p class="muted">Prefer email? <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
+    </div>
+    <div class="swoosh">
+      <img src="assets/Swoosh.png" alt="Brand swoosh">
+    </div>
+  </footer>
+
+</body>
+</html>
+/* =========================
+   CTA BUTTON SYSTEM
+   ========================= */
+.v2 .cta { 
+  --cta-bg: var(--accent);
+  --cta-fg: #fff;
+  --cta-bd: transparent;
+  display:inline-block; border-radius:12px; padding:12px 18px;
+  font-weight:700; text-decoration:none; 
+  background: var(--cta-bg); color: var(--cta-fg); border:1px solid var(--cta-bd);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease, background .15s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
 }
-.hero.hero--toolkit .col {
-  background: rgba(255,255,255,0.4);
-  border-radius: 12px;
-  padding: 12px 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+.v2 .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.18); }
+
+/* Hierarchy */
+.v2 .cta.primary { --cta-bg: var(--accent); --cta-fg:#fff; --cta-bd: transparent; }
+.v2 .cta.secondary { --cta-bg:#111; --cta-fg:#fff; --cta-bd: transparent; }
+.v2 .cta.ghost { --cta-bg:transparent; --cta-fg:#111; --cta-bd: #C9CDD3; box-shadow:none; }
+.v2 .cta.ghost:hover { background: rgba(0,0,0,.04); }
+
+/* Size variant (optional) */
+.v2 .cta.sm { padding:10px 14px; border-radius:10px; font-weight:700; }
+.v2 .cta.lg { padding:14px 20px; border-radius:14px; font-weight:800; }
+
+/* Space between stacked CTAs */
+.v2 .cta + .cta { margin-left:10px; }
+
+/* =========================
+   BLOG TAG "PILLS"
+   ========================= */
+.v2 .tags { margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
+.v2 .tag {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:999px; font-size:14px; font-weight:600;
+  background: #fff; color:#111; border:1px solid rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
-.hero.hero--toolkit .hero-visual .hero-book{
-  width: auto;
-  max-width: 200px;                 /* scale image down */
-  margin: 0 auto;                   /* center in its column */
-}
-/* ===== Compact Home Hero (smaller book image + less padding) ===== */
-.hero.hero--home {
-  padding: 36px 0;   /* reduce vertical whitespace */
+.v2 .tag::before { content:"#"; opacity:.55; }
+
+/* Mint/Gold contextual tags (optional, auto when inside a tinted band) */
+.v2 .bg-mint .tag { background: color-mix(in srgb, white 70%, var(--mint)); }
+.v2 .bg-gold .tag { background: color-mix(in srgb, white 70%, var(--gold)); }
+@supports not (background: color-mix(in srgb, white, black)) {
+  .v2 .bg-mint .tag { background: rgba(193,216,192,.30); }
+  .v2 .bg-gold .tag { background: rgba(241,213,154,.30); }
 }
 
-.hero.hero--home .hero-visual img {
-  max-width: 200px;   /* shrink book cover a bit */
-  height: auto;
-}
-/* === Compact the Home hero even more === */
-.hero.hero--home{
-  padding: 28px 0;                /* was 36px */
-}
-
-/* tighten the grid and the column balance */
-.hero.hero--home .row{
-  grid-template-columns: 1.25fr 0.75fr;  /* less real estate for the image column */
-  gap: 16px;                              /* was 24px */
-  align-items: center;                    /* vertically center content */
+/* =========================
+   STRONGER SECTION TINTS
+   ========================= */
+.v2 .bg-mint{ background: color-mix(in srgb, white 70%, var(--mint)); }
+.v2 .bg-gold{ background: color-mix(in srgb, white 70%, var(--gold)); }
+@supports not (background: color-mix(in srgb, white, black)) {
+  .v2 .bg-mint{ background: rgba(193,216,192,.40); }
+  .v2 .bg-gold{ background: rgba(241,213,154,.40); }
 }
 
-/* make the card around the book slimmer */
-.hero.hero--home .hero-visual{
-  padding: 8px;                    /* was 16px */
-  background: rgba(255,255,255,.45);
+/* Ensure blog titles stay dark over stronger tints */
+.v2 .post h2, .v2 .post h2 a, .v2 .post h2 a:visited {
+  color:#0b0b0b !important; -webkit-text-fill-color:#0b0b0b !important; text-decoration:none; font-weight:800;
 }
-
-/* keep the book modest */
-.hero.hero--home .hero-visual img{
-  max-width: 200px;                /* your current choice */
-  height: auto;
-}
-
-/* pull the next section up a bit */
-.hero.hero--home + .section{
-  padding-top: 20px;               /* was 40px from .section default */
-}
-
-/* optional: slightly tighter headline spacing */
-.hero.hero--home h1{ margin-bottom: 12px; }   /* trims ~10–12px */
-/* === Compact the Home hero even more === */
-.hero.hero--home{
-  padding: 28px 0;
-}
-
-.hero.hero--home .row{
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 16px;
-  align-items: center;
-}
-
-.hero.hero--home .hero-visual{
-  padding: 8px;
-  background: rgba(255,255,255,.45);
-}
-
-.hero.hero--home .hero-visual img{
-  max-width: 200px;
-  height: auto;
-}
-
-.hero.hero--home h1{ margin-bottom: 12px; }
-
-.hero.hero--home + .section{
-  padding-top: 20px;
-}
-/* ===== Book hero re-balance (smaller book image) ===== */
-.hero.hero--book .hero-visual img {
-  max-width: 220px;   /* smaller than current ~320px */
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-/* ===== Book page: compact hero + tidy stacked covers ===== */
-.hero.hero--book{
-  padding: 34px 0;                 /* slightly tighter */
-}
-
-.hero.hero--book .row{
-  grid-template-columns: 1.55fr 0.85fr;  /* give text more room, image less */
-  gap: 16px;
-  align-items: center;
-}
-
-/* the white tile behind the book */
-.hero.hero--book .hero-visual{
-  position: relative;
-  padding: 14px;                    /* more breathing room so images don't “touch” edges */
-  border-radius: 16px;
-  background: rgba(255,255,255,.55);
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  max-width: 320px;                 /* keep the whole tile modest */
-  margin-left: auto;                /* hugs right column edge cleanly */
-  overflow: visible;                /* allow slight angle without clipping */
-}
-
-/* normalize both images first */
-.hero.hero--book .hero-visual img{
-  display: block;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* back cover (first image) — smaller + slight angle, stays INSIDE tile */
-.hero.hero--book .hero-visual img:first-child{
-  position: absolute;
-  left: 6px;                        /* was likely too negative; pull it inside */
-  top: 26px;
-  max-width: 170px;                 /* clearly smaller than front */
-  opacity: .65;
-  transform: rotate(-5deg);
-  z-index: 1;
-}
-
-/* front cover (second image) — main focus, smaller than before */
-.hero.hero--book .hero-visual img:last-child{
-  position: relative;
-  z-index: 2;
-  max-width: 220px;                 /* shrink the main cover */
-}
-/* --- Book hero: correct stacking + keep covers inside tile --- */
-.hero.hero--book .hero-visual{
-  position: relative;
-  padding: 16px 18px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.55);
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  max-width: 320px;
-  margin-left: auto;
-  overflow: hidden;                 /* keep everything inside the tile */
-}
-
-/* normalize images */
-.hero.hero--book .hero-visual img{
-  display:block;
-  height:auto;
-  margin:0 auto;
-}
-
-/* BACK cover = the first <img> inside .hero-visual */
-.hero.hero--book .hero-visual img:nth-of-type(1){
-  position:absolute;
-  left:22px;                        /* ensure inside tile */
-  top:28px;
-  max-width:160px;
-  opacity:.6;
-  transform:rotate(-5deg);
-  z-index:1;                        /* behind the front cover */
-}
-
-/* FRONT cover = the second <img> inside .hero-visual */
-.hero.hero--book .hero-visual img:nth-of-type(2){
-  position:relative;
-  z-index:2;                        /* on top */
-  max-width:220px;                  /* keep modest */
-}
+.v2 .post h2 a:hover { text-decoration:underline; }
