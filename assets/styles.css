@@ -486,3 +486,45 @@
   color:#0b0b0b !important; -webkit-text-fill-color:#0b0b0b !important; text-decoration:none; font-weight:800;
 }
 .v2 .post h2 a:hover { text-decoration:underline; }
+/* ===== Mobile nav fix: wrap links + remove sideways scroll ===== */
+
+/* Make sure the page never scrolls sideways */
+html, body { overflow-x: hidden; }
+
+/* Fill off-canvas background with your brand gradient (iOS drag) */
+html, body.v2 {
+  background: linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%);
+}
+
+/* Header rows can wrap on small screens */
+.v2 header .wrap { display: flex; flex-wrap: wrap; }
+
+/* Brand on its own row, then the nav below on phones */
+@media (max-width: 768px) {
+  .v2 header .brand { flex: 1 1 100%; margin-bottom: 6px; }
+
+  .v2 header .nav {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;          /* allow wrapping instead of overflow */
+    gap: 8px 16px;            /* row/column gaps */
+    justify-content: flex-start;
+  }
+
+  /* Ensure links can break and shrink a bit */
+  .v2 header .nav a {
+    white-space: normal !important;   /* override any nowrap */
+    font-size: 16px;                   /* slightly smaller on mobile */
+    line-height: 1.2;
+  }
+}
+
+/* Safety net: if something still pushes width, allow soft scroll but hide scrollbar */
+@media (max-width: 420px) {
+  .v2 header .nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .v2 header .nav::-webkit-scrollbar { display: none; }
+}
