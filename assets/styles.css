@@ -528,3 +528,49 @@ html, body.v2 {
   }
   .v2 header .nav::-webkit-scrollbar { display: none; }
 }
+/* ====== HAMBURGER NAV ====== */
+
+/* structure */
+.v2 .header-row { display:flex; align-items:center; justify-content:space-between; }
+
+/* toggle button (hidden on desktop) */
+.v2 .nav-toggle {
+  display:none; border:0; background:transparent; padding:8px; margin-left:auto;
+  border-radius:10px; line-height:0; color:#0f172a;  /* dark ink */
+}
+.v2 .nav-toggle:focus-visible { outline: 3px solid rgba(15,23,42,.25); outline-offset: 3px; }
+
+/* mobile: collapse nav behind toggle */
+@media (max-width: 768px) {
+  .v2 .nav-toggle { display:inline-flex; }
+
+  .v2 .nav {
+    position: relative;
+    flex-basis: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    max-height: 0;                 /* collapsed */
+    transition: max-height .25s ease;
+    margin-top: 6px;
+  }
+
+  /* vertical stack of links */
+  .v2 .nav a {
+    display:block;
+    padding:10px 0;
+    border-top: 1px solid rgba(0,0,0,.06);
+    white-space: normal !important;
+  }
+
+  /* opened state */
+  .v2 .nav.open { max-height: 320px; }  /* fits 4–6 links; increase if needed */
+
+  /* keep gradient behind any overscroll */
+  html, body.v2 { background: linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%); }
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .v2 .nav { transition: none !important; }
+}
