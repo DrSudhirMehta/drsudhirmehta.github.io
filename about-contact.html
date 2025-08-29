@@ -4,17 +4,21 @@
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>About / Contact — Sudhir C. Mehta</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=12"/>
+  <link rel="stylesheet" href="assets/styles.css?v=15"/>
 </head>
 <body class="v2">
 
   <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="wrap header-row">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
-        <span>Sudhir C. Mehta</span>
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/><span>Sudhir C. Mehta</span>
       </a>
-      <nav class="nav">
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="book-publications.html">Book & Publications</a>
@@ -23,7 +27,6 @@
     </div>
   </header>
 
-  <!-- About (mint) -->
   <section class="section bg-mint" id="about">
     <div class="wrap">
       <h1 style="margin-top:0">About & Contact</h1>
@@ -33,7 +36,6 @@
     </div>
   </section>
 
-  <!-- Speaking (gold) -->
   <section class="section bg-gold" id="speaking">
     <div class="wrap">
       <h2>Speaking</h2>
@@ -42,7 +44,6 @@
     </div>
   </section>
 
-  <!-- Consulting (mint) -->
   <section class="section bg-mint" id="consulting">
     <div class="wrap">
       <h2>Consulting</h2>
@@ -51,57 +52,45 @@
     </div>
   </section>
 
-  <!-- Contact (gold) with form -->
   <section class="section bg-gold" id="contact">
     <div class="wrap">
       <h2>Contact</h2>
-
       <div class="grid cols-2" style="align-items:start">
-        <!-- Form card -->
         <div class="card">
           <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
             <div class="row">
               <div class="field">
                 <label for="name">Name<span aria-hidden="true" class="req">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name" />
+                <input type="text" id="name" name="name" required autocomplete="name"/>
               </div>
               <div class="field">
                 <label for="email">Email<span aria-hidden="true" class="req">*</span></label>
-                <input type="email" id="email" name="_replyto" required autocomplete="email" />
+                <input type="email" id="email" name="_replyto" required autocomplete="email"/>
               </div>
             </div>
-
             <div class="row">
               <div class="field">
                 <label for="org">Organization <span class="muted">(optional)</span></label>
-                <input type="text" id="org" name="organization" autocomplete="organization" />
+                <input type="text" id="org" name="organization" autocomplete="organization"/>
               </div>
               <div class="field">
                 <label for="topic">I’m interested in…</label>
                 <select id="topic" name="topic">
                   <option value="" selected>Select a topic</option>
-                  <option>Speaking</option>
-                  <option>Consulting</option>
-                  <option>Workshop/Advisory</option>
-                  <option>Research/Publication</option>
+                  <option>Speaking</option><option>Consulting</option>
+                  <option>Workshop/Advisory</option><option>Research/Publication</option>
                 </select>
               </div>
             </div>
-
             <div class="field">
               <label for="message">How can I help?</label>
               <textarea id="message" name="message" rows="6"></textarea>
             </div>
-
-            <!-- Honeypot (spam trap) -->
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"/>
-
             <button type="submit" class="cta primary">Send message</button>
             <div class="muted" style="margin-top:10px">I typically reply within 1–2 business days.</div>
           </form>
         </div>
-
-        <!-- Side info card -->
         <div class="card">
           <h3 style="margin-top:0">Ways to connect</h3>
           <p>Email: <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a><br/>
@@ -109,21 +98,19 @@
           <p class="muted">Topics: Founder dynamics, operating cadence, first 10 hires, culture at scale, FinTech transformation, AI &amp; trust.</p>
           <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
           <h3 style="margin-top:0">Advisory • Workshops • Speaking</h3>
-          <p>Let’s work on the hard stuff. Tell me where you want momentum: founder alignment, hiring, cadence, culture, or FinTech transformation.</p>
-          <p class="muted">Prefer email? <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a></p>
+          <p>Tell me where you want momentum: founder alignment, hiring, cadence, culture, or FinTech transformation.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap">
-      <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
-    </div>
-    <div class="swoosh">
-      <img src="assets/Swoosh.png" alt="Brand swoosh">
-    </div>
+    <div class="wrap"><div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div></div>
+    <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
+  <script>
+    (function(){const b=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!b||!n)return;function t(f){const o=(typeof f==='boolean')?f:!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}b.addEventListener('click',()=>t());document.addEventListener('keydown',e=>{if(e.key==='Escape')t(false)});n.addEventListener('click',e=>{if(e.target.closest('a'))t(false)})})();
+  </script>
 </body>
 </html>

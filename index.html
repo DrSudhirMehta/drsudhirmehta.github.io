@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Sudhir C. Mehta — Scholar. Author. Speaker. Advisor.</title>
   <link rel="icon" href="assets/favicon.png">
-  <!-- bump version to break cache -->
-  <link rel="stylesheet" href="assets/styles.css?v=13"/>
+  <link rel="stylesheet" href="assets/styles.css?v=15"/>
 </head>
 <body class="v2">
 
-  <!-- Header / Nav -->
   <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="wrap header-row">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
-        <span>Sudhir C. Mehta</span>
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/><span>Sudhir C. Mehta</span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="book-publications.html">Book & Publications</a>
@@ -26,7 +27,6 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="wrap">
       <h1>Scholar. Author. Speaker. Advisor.</h1>
@@ -39,7 +39,6 @@
     </div>
   </section>
 
-  <!-- Book + Latest Posts (mint) -->
   <section class="section bg-mint">
     <div class="wrap grid cols-2">
       <div class="card">
@@ -52,29 +51,18 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <h2>Latest Insights</h2>
         <div class="grid">
-          <div>
-            <strong><a href="../blog/first-10-hires.html">Your First 10 Hires: Slope over Intercept</a></strong><br>
-            <span class="muted">5 min read</span>
-          </div>
-          <div>
-            <strong><a href="../blog/founder-fit.html">Founder Fit Isn’t Vibes</a></strong><br>
-            <span class="muted">6 min read</span>
-          </div>
-          <div>
-            <strong><a href="../blog/cadence-and-trust.html">Cadence Creates Trust</a></strong><br>
-            <span class="muted">4 min read</span>
-          </div>
+          <div><strong><a href="blog.html#post-1">Why Startups Fail (Even With a Great Idea)</a></strong><br><span class="muted">5–6 min read</span></div>
+          <div><strong><a href="blog.html#post-2">The Science of Startup Teams</a></strong><br><span class="muted">4–5 min read</span></div>
+          <div><strong><a href="blog.html#post-3">Culture Doesn’t Crack — It Erodes</a></strong><br><span class="muted">5 min read</span></div>
         </div>
         <p style="margin-top:12px"><a class="cta alt" href="blog.html">View all posts</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Speaking & Consulting (gold) -->
   <section class="section bg-gold">
     <div class="wrap grid cols-2">
       <div class="card">
@@ -82,13 +70,13 @@
         <p>Keynotes and talks on co-founder fit, early team design, operating cadence, and culture at scale.</p>
         <ul class="muted">
           <li>Founder/VC events • MBA & Exec-Ed • Corporate offsites</li>
-          <li>Interactive Q&A, tailored industry stories</li>
+          <li>Interactive Q&A, tailored stories</li>
         </ul>
         <p><a class="cta" href="about-contact.html#speaking">Invite me to speak</a></p>
       </div>
       <div class="card">
         <h2>Consulting Advisory</h2>
-        <p>Lightweight, practical advisory for founders and leaders—clarify roles, align incentives, and build momentum.</p>
+        <p>Lightweight, practical advisory for founders and leaders — clarify roles, align incentives, build momentum.</p>
         <ul class="muted">
           <li>Co-founder compatibility & equity/roles</li>
           <li>First 10 hires & operating cadence</li>
@@ -99,7 +87,6 @@
     </div>
   </section>
 
-  <!-- Publications (mint) -->
   <section class="section bg-mint">
     <div class="wrap">
       <div class="card">
@@ -107,31 +94,21 @@
         <ul>
           <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
           <li>Entrepreneurial Success: Interplay of Personality & Co-Founder Team Dynamics</li>
-          <li>Familiness, Interests, and Opportunities: Reframing the Landscape of Family Business Succession</li>
+          <li>Familiness, Interests, and Opportunities: Reframing Family Business Succession</li>
         </ul>
-        <p class="muted">See more on the Book & Publications page.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer with Projects + Swoosh -->
   <footer>
     <div class="wrap">
-      <div class="footer-links mini">
-        <strong>Projects:</strong>
-        <a href="../beyondgpt.html">BeyondGPT</a> ·
-        <a href="../toolkit.html">Toolkit</a> ·
-        <a href="../services.html">Services</a> ·
-        <a href="../podcast.html">Podcast</a>
-      </div>
-      <div class="mini" style="margin-top:10px">
-        © <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta
-      </div>
+      <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
     </div>
-    <div class="swoosh">
-      <img src="assets/Swoosh.png" alt="Brand swoosh">
-    </div>
+    <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
+  <script>
+    (function(){const b=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!b||!n)return;function t(f){const o=(typeof f==='boolean')?f:!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}b.addEventListener('click',()=>t());document.addEventListener('keydown',e=>{if(e.key==='Escape')t(false)});n.addEventListener('click',e=>{if(e.target.closest('a'))t(false)})})();
+  </script>
 </body>
 </html>

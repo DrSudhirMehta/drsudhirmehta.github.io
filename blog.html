@@ -4,18 +4,21 @@
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Blog — Sudhir C. Mehta</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=8"/>
+  <link rel="stylesheet" href="assets/styles.css?v=15"/>
 </head>
 <body class="v2">
 
-  <!-- Header -->
   <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="wrap header-row">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
-        <span>Sudhir C. Mehta</span>
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/><span>Sudhir C. Mehta</span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="book-publications.html">Book & Publications</a>
@@ -24,437 +27,53 @@
     </div>
   </header>
 
-  <!-- Blog feed -->
   <section class="section bg-mint">
     <div class="wrap">
       <h1 style="margin-top:0">Blog</h1>
 
-      <!-- Tuesday, April 15, 2025 — “Startups don’t fail because of product problems” -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-04-15" class="muted">Tuesday, April 15, 2025</time>
-          <h2>Startups Don’t Fail Because of Product Problems</h2>
-        </header>
-        <p>Startups don’t fail because of product problems. They fail because of people problems.</p>
-        <p>This line has stuck with me for years — in fintech, in startups, in consulting.</p>
-        <ul>
-          <li>Hiring is easy. Building trust is hard.</li>
-          <li>Equity is easy. Alignment is hard.</li>
-          <li>Ideas are easy. Teams are hard.</li>
-        </ul>
-        <p>My upcoming book <em>Winning Startup Teams</em> is about solving exactly this — before it breaks you.</p>
-        <p><strong>Question:</strong> What’s the hardest part of building your team?</p>
+      <!-- Example post (IDs help deep-links from Home) -->
+      <article class="card post" id="post-1">
+        <h2>Why Startups Fail (Even With a Great Idea)</h2>
+        <p>Most startups don’t fail because of product problems. They fail because of people problems…</p>
         <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">leadership</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">founders</span>
-          <span class="tag">teamwork</span>
-          <span class="tag">culture</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">founderlife</span>
-          <span class="tag">scalingstartups</span>
+          <span class="tag">startups</span><span class="tag">founders</span><span class="tag">teamdynamics</span>
+          <span class="tag">entrepreneurship</span><span class="tag">startupteams</span><span class="tag">culture</span>
+          <span class="tag">leadership</span><span class="tag">productmarketfit</span><span class="tag">scaling</span>
         </div>
-
       </article>
 
-      <!-- Why Startups Fail (Even With a Great Idea) -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-04-15" class="muted">Tuesday, April 15, 2025</time>
-          <h2>Why Startups Fail (Even With a Great Idea)</h2>
-        </header>
-        <p>This week, I shared that most startups don’t fail because of product problems. They fail because of people problems.</p>
-        <p>And the patterns are painfully familiar:</p>
-        <ul>
-          <li>Founders pulling in different directions.</li>
-          <li>Unclear roles and decision rights.</li>
-          <li>Communication that breaks under stress.</li>
-          <li>Culture that quietly erodes as the team grows.</li>
-        </ul>
-        <p>These aren’t side issues. <strong>They are the startup.</strong></p>
-        <p>In <em>Winning Startup Teams</em>, I explore how founders can identify and fix these cracks early — before the real pressure hits.</p>
-        <p><strong>Question:</strong> What’s the one team mistake you wish you had caught earlier?</p>
+      <article class="card post" id="post-2">
+        <h2>The Science of Startup Teams</h2>
+        <p>Data meets dynamics to unlock success. The strongest teams combine clarity, trust, and cadence…</p>
         <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founders</span>
-          <span class="tag">teamdynamics</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">culture</span>
-          <span class="tag">leadership</span>
-          <span class="tag">productmarketfit</span>
-          <span class="tag">scaling</span>
-        </div>
-
-      </article>
-
-      <!-- Sunday, April 20, 2025 — ETC Model -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-04-20" class="muted">Sunday, April 20, 2025</time>
-          <h2>Entrepreneurial Traits &amp; Capabilities (ETC): A Clarity Tool</h2>
-        </header>
-        <p>A good product with a bad team won’t scale. But a great team with an evolving product? That’s startup magic.</p>
-        <p>Over the past year, I’ve been building something to help founders get team decisions right — earlier. One of the core frameworks I’ve developed is the <strong>Entrepreneurial Traits &amp; Capabilities (ETC) Model</strong> — a tool to help founders understand how their personality traits shape leadership, co-founder fit, and hiring moves.</p>
-        <p>It’s not a personality test. It’s a clarity tool. It is designed to help founders build teams intentionally — not accidentally.</p>
-        <p><strong>Question:</strong> Would you use something like this with your team or portfolio companies?</p>
-        <div class="tags">
-          <span class="tag">founders</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">teamdynamics</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupwisdom</span>
-          <span class="tag">startupteams</span>
-        </div>
-
-      </article>
-
-      <!-- Risk isn’t competition or funding — it’s team breakdown -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <h2>Your Biggest Risk Isn’t Competition. It’s Team Breakdown.</h2>
-        </header>
-        <p>Think your startup’s biggest risk is competition or funding? It’s not. It’s your team breaking down before you scale up.</p>
-        <ul>
-          <li>Misalignment.</li>
-          <li>Ego clashes.</li>
-          <li>Hiring mistakes.</li>
-        </ul>
-        <p>These kill momentum long before the product does. But great teams spot the cracks early and fix them.</p>
-        <p>In <em>Winning Startup Teams</em>, I break down what sets strong teams apart — and how founders can build team resilience from day one.</p>
-        <p><strong>Question:</strong> What’s the toughest team challenge you’ve faced while scaling?</p>
-        <div class="tags">
-          <span class="tag">founders</span>
-          <span class="tag">startups</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">leadership</span>
-          <span class="tag">scaling</span>
-          <span class="tag">teamdynamics</span>
-        </div>
-
-      </article>
-
-      <!-- Monday, April 28, 2025 — Title change -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-04-28" class="muted">Monday, April 28, 2025</time>
-          <h2>From “Winning Startup Teams” to “Beyond the Garage” — Why I Changed the Title</h2>
-        </header>
-        <p>When I started this journey, I thought the book was about building winning teams. And it is. But it’s also about something bigger:</p>
-        <ul>
-          <li>The transition from scrappy beginnings to sustainable growth.</li>
-          <li>The hard truths founders face after the garage stage.</li>
-          <li>The team dynamics that can make or break that journey.</li>
-        </ul>
-        <p><em>Beyond the Garage</em> felt more honest. More real. It’s about what happens after the idea, after the early hustle — when you need to lead, align, and scale.</p>
-        <p><strong>Question:</strong> What do you think — does the new title resonate?</p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founders</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">growth</span>
-          <span class="tag">scaling</span>
-        </div>
-
-      </article>
-
-      <!-- Sunday, May 4, 2025 — Short post (equity) -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-05-04" class="muted">Sunday, May 4, 2025</time>
-          <h2>Before You Split Equity, Align Your Expectations</h2>
-        </header>
-        <p><em>“Before you split equity, align your expectations.”</em> Early equity decisions shape more than ownership — they shape trust.</p>
-        <p>In <em>Beyond the Garage</em>, I talk about how the equity split isn’t just math — it’s a mirror for how aligned you really are. Because the real work isn’t dividing shares — it’s aligning expectations before the pressure hits.</p>
-        <p><strong>Question:</strong> How did you and your co-founder decide what was fair?</p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">equity</span>
-          <span class="tag">cofounders</span>
-          <span class="tag">founderfit</span>
+          <span class="tag">startups</span><span class="tag">leadership</span><span class="tag">entrepreneurship</span>
+          <span class="tag">founders</span><span class="tag">teamwork</span><span class="tag">culture</span>
           <span class="tag">startupteams</span>
         </div>
       </article>
 
-      <!-- Equity splits long post -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <h2>Equity Splits Can Unite — or Quietly Tear a Team Apart</h2>
-        </header>
-        <p>I’ve seen too many founding teams delay the tough equity conversation because “we’ll figure it out later.” But misaligned expectations about contributions, roles, or risk-sharing always catch up — usually when it’s too late.</p>
-        <p>It’s not about formulas. It’s about clarity, trust, and alignment — early.</p>
-        <ul>
-          <li>Who’s bringing what to the table?</li>
-          <li>Who’s staying in through the ups and downs?</li>
-          <li>What does “fair” really mean to each of you?</li>
-        </ul>
-        <p>These aren’t side questions. They are the foundation.</p>
-        <p><strong>Question:</strong> When did you have the equity conversation — and what do you wish you’d known?</p>
+      <article class="card post" id="post-3">
+        <h2>Culture Doesn’t Crack — It Erodes</h2>
+        <p>The first 10 hires, the co-founder relationship, the equity split… most cultures don’t collapse in a single moment; they wear down…</p>
         <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founders</span>
-          <span class="tag">equitysplit</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">entrepreneurship</span>
-        </div>
-      </article>
-
-      <!-- Monday, May 12, 2025 — Culture erodes -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-05-12" class="muted">Monday, May 12, 2025</time>
-          <h2>Culture Doesn’t Crack — It Erodes</h2>
-        </header>
-        <p>The first 10 hires, the co-founder relationship, the equity split, the leadership dynamic… None of these break overnight. They break slowly — through unspoken assumptions, blurred roles, and misaligned expectations.</p>
-        <p>That’s how company culture erodes. Not through one big failure, but through a thousand small ones.</p>
-        <p>Like the Roman Colosseum, most cultures don’t collapse in a single dramatic moment. They wear down — slowly, silently — through misalignment, mixed signals, and unresolved tension.</p>
-        <p>In <em>Beyond the Garage</em>, I keep coming back to one core idea: Clarity isn’t optional. It’s oxygen. Especially when the pressure hits.</p>
-        <p><strong>Question:</strong> What’s one moment where your culture held — or cracked — under pressure?</p>
-        <div class="tags">
-          <span class="tag">startupculture</span>
-          <span class="tag">founders</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">cofounders</span>
-          <span class="tag">teamalignment</span>
+          <span class="tag">startupculture</span><span class="tag">founders</span><span class="tag">leadership</span>
+          <span class="tag">startupteams</span><span class="tag">cofounders</span><span class="tag">teamalignment</span>
           <span class="tag">beyondthegarage</span>
         </div>
-        <p class="muted" style="margin-top:6px">👥 With gratitude to @BerkleyBaker and @AllisonBowen for thoughtful early reads and invaluable feedback.</p>
-      </article>
-
-      <!-- Leadership Isn’t a Role. It’s a Response. -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <h2>Leadership Isn’t a Role. It’s a Response.</h2>
-        </header>
-        <p>Culture erodes when leaders check out. It strengthens when they step in — with clarity, empathy, and presence.</p>
-        <p>In <em>Beyond the Garage</em>, I talk about what leadership really looks like during the messy middle:</p>
-        <ul>
-          <li>When roles blur</li>
-          <li>When conflict flares</li>
-          <li>When the path forward isn’t obvious</li>
-        </ul>
-        <p>That’s when founders transition from “wearing all the hats” to actually leading a team. It’s not about being the loudest in the room. It’s about making sure everyone still hears the mission.</p>
-        <p><strong>Question:</strong> What’s one leadership moment that defined your team?</p>
-        <div class="tags">
-          <span class="tag">startupleadership</span>
-          <span class="tag">founders</span>
-          <span class="tag">teambuilding</span>
-          <span class="tag">beyondthegarage</span>
-          <span class="tag">cultureunderpressure</span>
-        </div>
-      </article>
-
-      <!-- Wednesday, May 21, 2025 — Writing taught leadership -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-05-21" class="muted">Wednesday, May 21, 2025</time>
-          <h2>What Writing This Book Taught Me About Leadership</h2>
-        </header>
-        <p>I started writing <em>Beyond the Garage</em> to unpack what I’d seen go wrong in startup teams. But somewhere along the way, it became something else. It became a mirror.</p>
-        <p>Writing about leadership forced me to revisit the moments I was too slow to decide. Too quiet in the room. Too attached to being right. Too uncertain to let go.</p>
-        <p>I didn’t want to write just another paper that sits on a shelf. I wanted to take the research I’d done — and the experiences I’d lived — and make it useful. Something founders, early teams, and those who support them could apply right away.</p>
-        <p>Leadership isn’t about having all the answers. It’s about holding the space — for clarity, for conflict, for growth.</p>
-        <p>If this book helps even one founder avoid the mistakes I’ve seen (or made), it’s worth it.</p>
-        <div class="tags">
-          <span class="tag">founderlife</span>
-          <span class="tag">leadership</span>
-          <span class="tag">reflection</span>
-          <span class="tag">beyondthegarage</span>
-          <span class="tag">startups</span>
-          <span class="tag">writingjourney</span>
-        </div>
-      </article>
-
-      <!-- Wednesday, May 28, 2025 — 13 truths carousel -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-05-28" class="muted">Wednesday, May 28, 2025</time>
-          <h2>13 Truths for Building Startup Teams</h2>
-        </header>
-        <p>Building a winning startup team isn’t just art — or luck. It’s a set of patterns, pitfalls, and playbooks that founders ignore at their own risk.</p>
-        <p>After three decades in FinTech and a deep dive into founder psychology, I wrote <em>Beyond the Garage</em> to give teams a fighting chance. This carousel shares 13 practical truths I wish more founders internalized earlier.</p>
-        <p><strong>Question:</strong> Which one speaks to your experience?</p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founders</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">beyondthegarage</span>
-          <span class="tag">teamdynamics</span>
-        </div>
-      </article>
-
-      <!-- Sunday, June 1, 2025 — Three characteristics -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-06-01" class="muted">Sunday, June 1, 2025</time>
-          <h2>Three Characteristics of Strong Startup Teams</h2>
-        </header>
-        <p>My research found that the strongest startup teams shared three key characteristics:</p>
-        <ul>
-          <li>Founders who were agreeable, not just confident</li>
-          <li>Teams aligned around a clear vision, not just words on a page</li>
-          <li>Cultures built on shared leadership, not just a single dominant voice</li>
-        </ul>
-        <p>That’s why these traits are at the heart of <em>Beyond the Garage</em>.</p>
-        <p><strong>Question:</strong> Have you seen these dynamics play out in your own team?</p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founders</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">beyondthegarage</span>
-          <span class="tag">teamdynamics</span>
-          <span class="tag">personalitytraits</span>
-        </div>
-      </article>
-
-      <!-- Trust tools post -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <h2>Build Trust That Lasts</h2>
-        </header>
-        <p>Most founders obsess over what to build. But the best ones also obsess over who they’re building it with.</p>
-        <p>Early team breakdowns aren’t caused by bad ideas or weak markets — they’re caused by mismatched personalities, unspoken assumptions, and trust that erodes under pressure.</p>
-        <p>That’s why I created tools like the <strong>Co-Founder Fit Quiz</strong> and the <strong>Conflict Resolution Worksheet</strong> — because building something that lasts starts with building trust that lasts.</p>
-        <p>Ask yourself:</p>
-        <ul>
-          <li>Do we have clarity on how decisions get made?</li>
-          <li>Do we know how we’ll resolve disagreements when — not if — they arise?</li>
-          <li>Do we trust each other enough to be honest?</li>
-        </ul>
-        <p><em>Beyond the Garage</em> isn’t just about startup success. It’s about startup survivability.</p>
-        <div class="tags">
-          <span class="tag">BeyondTheGarage</span>
-          <span class="tag">StartupTeams</span>
-          <span class="tag">FounderFit</span>
-          <span class="tag">Leadership</span>
-          <span class="tag">Entrepreneurship</span>
-          <span class="tag">TeamDynamics</span>
-          <span class="tag">ConflictResolution</span>
-        </div>
-      </article>
-
-      <!-- Thursday, June 12, 2025 — Pivots (post 1) -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-06-12" class="muted">Thursday, June 12, 2025</time>
-          <h2>Startups Don’t Pivot Because They Failed — They Pivot Because They Learned</h2>
-        </header>
-        <p>Every startup hits a moment when the original plan no longer works. The pivot isn’t the failure — it’s the test. Of leadership. Of trust. Of alignment.</p>
-        <p>If the team is fractured — unclear roles, unspoken resentments, no trust — it won’t survive the pressure. When founders are aligned and the team has clarity and mutual respect, they don’t just survive the shift — they grow from it.</p>
-        <div class="tags">
-          <span class="tag">BeyondTheGarage</span>
-          <span class="tag">StartupTeams</span>
-          <span class="tag">FounderFit</span>
-          <span class="tag">StartupPivots</span>
-          <span class="tag">TeamAlignment</span>
-          <span class="tag">Leadership</span>
-          <span class="tag">PersonailtyTraits</span>
-          <span class="tag">TeamAttributes</span>
-        </div>
-      </article>
-
-      <!-- Thursday, June 12, 2025 — Pivots (post 2) -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-06-12" class="muted">Thursday, June 12, 2025</time>
-          <h2>The Inner Pivot: Leading Through Change With Clarity</h2>
-        </header>
-        <p>Startups don’t pivot because they failed. They pivot because they learned. But only aligned teams survive the shift.</p>
-        <p>In <em>Beyond the Garage</em>, I call this the <strong>inner pivot</strong> — the mindset shift founders must make to lead through change with clarity, trust, and adaptability.</p>
-        <p>Ask yourself:</p>
-        <ul>
-          <li>Are we aligned on the new direction?</li>
-          <li>Do we have the trust to challenge each other — and still move forward?</li>
-          <li>Are we steady at the core, even as everything else changes?</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">BeyondTheGarage</span>
-          <span class="tag">StartupTeams</span>
-          <span class="tag">FounderFit</span>
-          <span class="tag">StartupPivots</span>
-          <span class="tag">TeamAlignment</span>
-          <span class="tag">Leadership</span>
-          <span class="tag">PersonailtyTraits</span>
-          <span class="tag">TeamAttributes</span>
-        </div>
-      </article>
-
-      <!-- Monday, June 23, 2025 — You don’t just build a startup, you build a team -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-06-23" class="muted">Monday, June 23, 2025</time>
-          <h2>You Don’t Just Build a Startup. You Build a Team.</h2>
-        </header>
-        <blockquote class="muted">“A startup is not a product. It’s a human adventure.” — Unknown</blockquote>
-        <p>Founders often believe success starts with a brilliant idea. But the real challenge? Building the right team to bring that idea to life — and to adapt when the idea needs to change.</p>
-        <p>In <em>Beyond the Garage</em>, I explore the most common pitfalls founders face — not in the business model, but in the people model:</p>
-        <ul>
-          <li>Confusing shared enthusiasm with alignment</li>
-          <li>Delaying tough conversations about equity, roles, or leadership gaps</li>
-          <li>Mistaking tension for “healthy conflict” when trust is breaking down</li>
-        </ul>
-        <p>These insights are drawn from real-world founder journeys, research, and hard-won lessons. <strong>Available on Amazon starting July 4 — <em>Beyond the Garage</em>.</strong></p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">founderlife</span>
-          <span class="tag">BeyondTheGarage</span>
-          <span class="tag">entrepreneurship</span>
-          <span class="tag">leadership</span>
-          <span class="tag">startupteams</span>
-          <span class="tag">founderlessons</span>
-        </div>
-      </article>
-
-      <!-- Wednesday, July 23, 2025 — Why most startups fail -->
-      <article class="post card" style="margin:22px 0">
-        <header>
-          <time datetime="2025-07-23" class="muted">Wednesday, July 23, 2025</time>
-          <h2>Why Do Most Startups Fail?</h2>
-        </header>
-        <p>Not because of tech. Not because of timing. Because the team falls apart — misaligned co-founders, unclear roles, broken trust.</p>
-        <p>Whether you’re hiring your first 10 employees or leading a cross-functional team inside a larger company, the lessons are the same:</p>
-        <ul>
-          <li>Build alignment early</li>
-          <li>Handle conflict before it festers</li>
-          <li>Design your team, don’t just grow it</li>
-        </ul>
-        <p>If you’ve ever experienced the pain of a team that should have worked — but didn’t — I’d love to hear what you learned.</p>
-        <p><strong>DM me</strong> — I’ll share a few lessons from my research that might help.</p>
-        <div class="tags">
-          <span class="tag">startups</span>
-          <span class="tag">teamdynamics</span>
-          <span class="tag">leadership</span>
-          <span class="tag">BeyondTheGarage</span>
-          <span class="tag">cofounders</span>
-          <span class="tag">founderfit</span>
-          <span class="tag">trust</span>
-          <span class="tag">entrepreneurship</span>
-        </div>
-      
       </article>
 
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="wrap">
       <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
     </div>
-    <div class="swoosh">
-      <img src="assets/Swoosh.png" alt="Brand swoosh">
-    </div>
+    <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
+  <script>
+    (function(){const b=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!b||!n)return;function t(f){const o=(typeof f==='boolean')?f:!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}b.addEventListener('click',()=>t());document.addEventListener('keydown',e=>{if(e.key==='Escape')t(false)});n.addEventListener('click',e=>{if(e.target.closest('a'))t(false)})})();
+  </script>
 </body>
 </html>

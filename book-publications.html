@@ -4,17 +4,21 @@
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Book & Publications — Sudhir C. Mehta</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=11"/>
+  <link rel="stylesheet" href="assets/styles.css?v=15"/>
 </head>
 <body class="v2">
 
   <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="wrap header-row">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
-        <span>Sudhir C. Mehta</span>
+        <img src="assets/logo.png" alt="Sudhir C. Mehta"/><span>Sudhir C. Mehta</span>
       </a>
-      <nav class="nav">
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="book-publications.html">Book & Publications</a>
@@ -23,7 +27,6 @@
     </div>
   </header>
 
-  <!-- Book (mint) -->
   <section class="section bg-mint">
     <div class="wrap">
       <h1 style="margin-top:0">Book & Publications</h1>
@@ -34,26 +37,18 @@
         <div>
           <p>A practical, research-backed playbook for founders: co-founder fit, equity/roles/trust, first 10 hires, cadence, and culture.</p>
           <p>
-            <!-- Exact Amazon link you provided -->
             <a class="cta primary"
                href="https://www.amazon.com/Beyond-Garage-Building-Teams-Actually/dp/B0FFPJ4C3N/ref=sr_1_1?crid=23KSZCEJSEQF2&dib=eyJ2IjoiMSJ9.WZqHldG8KhaeS_R5L9dPppZutbBFwtcqNEyTHyX1ymrRC2bj1hUgALfl1mLC74uI_la44fVd-yz3rxocS1453zzoCZPsqHA6_i_kPVzr-MyNLciw25ErALgtJfcidO9_ZNj9PiaR17QdZUZYy8v7ltIabSIUVwzOdgGisty5rpqDTZ_YPJHObVXfeV1NIGVdMKjQ50XtB9mv4CIxrMO6u7WgwfDNeQkDlrWvlAHuKI0.nzsBqVurRs64sBfD9NL0jXNicp12GXoCl5mYT-wpPs0&dib_tag=se&keywords=beyond+the+garage&qid=1756420156&sprefix=beyond+the+garage%2Caps%2C125&sr=8-1"
-               target="_blank" rel="noopener">
-              Buy on Amazon
-            </a>
-
-            <!-- Spaces in filename are URL-encoded with %20 -->
+               target="_blank" rel="noopener">Buy on Amazon</a>
             <a class="cta ghost"
                href="assets/Beyond%20the%20Garage%20-%20Toolkit.pdf"
-               target="_blank" rel="noopener" download="Beyond-the-Garage-Toolkit.pdf">
-              Download Toolkit (PDF)
-            </a>
+               target="_blank" rel="noopener" download="Beyond-the-Garage-Toolkit.pdf">Download Toolkit (PDF)</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Publications (gold) -->
   <section class="section bg-gold">
     <div class="wrap">
       <h2>Publications</h2>
@@ -69,10 +64,11 @@
     <div class="wrap">
       <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
     </div>
-    <div class="swoosh">
-      <img src="assets/Swoosh.png" alt="Brand swoosh">
-    </div>
+    <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
+  <script>
+    (function(){const b=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!b||!n)return;function t(f){const o=(typeof f==='boolean')?f:!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}b.addEventListener('click',()=>t());document.addEventListener('keydown',e=>{if(e.key==='Escape')t(false)});n.addEventListener('click',e=>{if(e.target.closest('a'))t(false)})})();
+  </script>
 </body>
 </html>
