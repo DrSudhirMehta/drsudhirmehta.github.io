@@ -191,3 +191,26 @@ html.noscroll, body.noscroll{ overflow:hidden; }
 #about.section h1{ margin-bottom:6px; }
 #about.section h2, #speaking.section h2, #consulting.section h2{ margin:8px 0; }
 #about.section p, #speaking.section p, #consulting.section p{ margin-bottom:10px; }
+
+/* ===== Desktop lockout for mobile overlay (prevents desktop leak) ===== */
+.v2 .mobile-menu { display: none; }
+.v2 .nav-toggle   { display: none; }
+.v2 .desktop-nav  { display: flex; }
+
+@media (max-width: 768px) {
+  .v2 .desktop-nav { display: none; }
+  .v2 .nav-toggle  { display: inline-flex; }
+  .v2 .mobile-menu.open { display: block; }
+}
+
+/* Force-hide overlay on desktop and in PDFs */
+@media (min-width: 769px) {
+  .v2 .mobile-menu,
+  .v2 .mobile-menu.open,
+  .v2 .nav-toggle { display: none !important; }
+  .v2 .desktop-nav { display: flex !important; }
+}
+@media print {
+  .v2 .mobile-menu,
+  .v2 .nav-toggle { display: none !important; }
+}
