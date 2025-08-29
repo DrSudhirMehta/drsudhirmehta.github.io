@@ -4,7 +4,7 @@
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>About / Contact — Sudhir C. Mehta</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=16"/>
+  <link rel="stylesheet" href="assets/styles.css?v=18"/>
 </head>
 <body class="v2">
 
@@ -133,7 +133,7 @@
     <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
-  <!-- Mobile menu JS -->
+  <!-- Mobile menu JS (desktop-safe) -->
   <script>
     (function(){
       const openBtn = document.getElementById('navToggle');
@@ -141,7 +141,17 @@
       const menu = document.getElementById('mobileMenu');
       const html = document.documentElement, body = document.body;
       if(!openBtn || !menu) return;
+
+      const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
       function setOpen(open){
+        if(!isMobile()){
+          menu.classList.remove('open');
+          openBtn.setAttribute('aria-expanded','false');
+          html.classList.remove('noscroll'); body.classList.remove('noscroll');
+          menu.setAttribute('aria-hidden','true');
+          return;
+        }
         menu.classList.toggle('open', open);
         openBtn.setAttribute('aria-expanded', String(open));
         const m = open ? 'add' : 'remove';
@@ -149,10 +159,14 @@
         menu.setAttribute('aria-hidden', String(!open));
         if(open) menu.querySelector('.mobile-links a')?.focus();
       }
+
       openBtn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
       closeBtn?.addEventListener('click', () => setOpen(false));
       document.addEventListener('keydown', e => { if(e.key==='Escape') setOpen(false); });
       menu.addEventListener('click', e => { if(e.target.closest('.mobile-links a')) setOpen(false); });
+
+      setOpen(false);
+      window.addEventListener('resize', () => setOpen(false));
     })();
   </script>
 </body>
