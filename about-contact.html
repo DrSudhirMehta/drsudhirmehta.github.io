@@ -4,29 +4,49 @@
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>About / Contact — Sudhir C. Mehta</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=15"/>
+  <link rel="stylesheet" href="assets/styles.css?v=16"/>
 </head>
 <body class="v2">
 
+  <!-- Header -->
   <header>
     <div class="wrap header-row">
       <a class="brand" href="index.html">
         <img src="assets/logo.png" alt="Sudhir C. Mehta"/><span>Sudhir C. Mehta</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
         <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
-      <nav class="nav" id="siteNav" aria-label="Primary">
+      <nav class="nav desktop-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="book-publications.html">Book & Publications</a>
         <a href="about-contact.html">About / Contact</a>
       </nav>
     </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <span>Menu</span>
+          <button class="nav-close" id="navClose" aria-label="Close menu">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6l-12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-links" aria-label="Primary mobile">
+          <a href="index.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a href="book-publications.html">Book & Publications</a>
+          <a href="about-contact.html">About / Contact</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
+  <!-- About -->
   <section class="section bg-mint" id="about">
     <div class="wrap">
       <h1 style="margin-top:0">About & Contact</h1>
@@ -36,6 +56,7 @@
     </div>
   </section>
 
+  <!-- Speaking -->
   <section class="section bg-gold" id="speaking">
     <div class="wrap">
       <h2>Speaking</h2>
@@ -44,6 +65,7 @@
     </div>
   </section>
 
+  <!-- Consulting -->
   <section class="section bg-mint" id="consulting">
     <div class="wrap">
       <h2>Consulting</h2>
@@ -52,6 +74,7 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section class="section bg-gold" id="contact">
     <div class="wrap">
       <h2>Contact</h2>
@@ -104,13 +127,33 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="wrap"><div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div></div>
     <div class="swoosh"><img src="assets/Swoosh.png" alt="Brand swoosh"></div>
   </footer>
 
+  <!-- Mobile menu JS -->
   <script>
-    (function(){const b=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!b||!n)return;function t(f){const o=(typeof f==='boolean')?f:!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}b.addEventListener('click',()=>t());document.addEventListener('keydown',e=>{if(e.key==='Escape')t(false)});n.addEventListener('click',e=>{if(e.target.closest('a'))t(false)})})();
+    (function(){
+      const openBtn = document.getElementById('navToggle');
+      const closeBtn = document.getElementById('navClose');
+      const menu = document.getElementById('mobileMenu');
+      const html = document.documentElement, body = document.body;
+      if(!openBtn || !menu) return;
+      function setOpen(open){
+        menu.classList.toggle('open', open);
+        openBtn.setAttribute('aria-expanded', String(open));
+        const m = open ? 'add' : 'remove';
+        html.classList[m]('noscroll'); body.classList[m]('noscroll');
+        menu.setAttribute('aria-hidden', String(!open));
+        if(open) menu.querySelector('.mobile-links a')?.focus();
+      }
+      openBtn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+      closeBtn?.addEventListener('click', () => setOpen(false));
+      document.addEventListener('keydown', e => { if(e.key==='Escape') setOpen(false); });
+      menu.addEventListener('click', e => { if(e.target.closest('.mobile-links a')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>
