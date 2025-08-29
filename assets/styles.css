@@ -1,576 +1,193 @@
-/* =========================================================
-   SudhirCMehta — v2 Minimal Theme (scoped to .v2)
-   ========================================================= */
-
-/* Brand tokens */
-.v2 {
-  --mint:#C1D8C0; --gold:#F1D59A;
-  --ink:#111827; --muted:#6B7280;
-  --bg:#ffffff; --card:#ffffff; --border:#E5E7EB;
-  --accent:#0a66c2; --radius:12px; --shadow:0 8px 24px rgba(0,0,0,.08);
-  color:var(--ink); background:var(--bg); line-height:1.6;
-  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+/* ========== Base / Theme ========== */
+:root{
+  --mint: #C1D8C0;
+  --gold: #F1D59A;
+  --ink: #111827;
+  --muted: #4B5563;
+  --border: #E5E7EB;
+  --accent: #1f6c50;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 24px rgba(0,0,0,.12);
 }
 
-/* Basics */
-.v2 *{box-sizing:border-box}
-.v2 a{color:var(--accent);text-decoration:none}
-.v2 a:hover{text-decoration:underline}
-.v2 .wrap{max-width:1040px;margin:0 auto;padding:24px}
-
-/* Header + Nav */
-.v2 header{
-  /* subtle mint wash */
-  background:linear-gradient(180deg, var(--mint) 0%, transparent 100%);
-  border-bottom:1px solid var(--border);
-}
-.v2 .brand{
-  display:flex; align-items:center; gap:16px; font-weight:700;
-}
-.v2 .brand img{ height:72px; width:auto; display:block; }
-.v2 .nav{display:flex;gap:16px;justify-content:flex-end;margin:8px 0 0}
-.v2 .nav a{color:var(--ink);padding:6px 8px;border-radius:8px}
-
-/* Hero */
-.v2 .hero{
-  background:linear-gradient(180deg,var(--mint),var(--gold));
-  border-bottom:1px solid rgba(0,0,0,.06);
-  box-shadow:inset 0 -24px 40px rgba(0,0,0,.03);
-  padding:72px 0 48px;
-}
-.v2 .hero h1{
-  margin:0 0 10px; font-weight:800; letter-spacing:-.3px;
-  font-size:clamp(30px,5vw,46px);
-}
-.v2 .hero .lead{ font-size:clamp(16px,2.2vw,20px); color:#2f343b; margin:0 0 16px; }
-.v2 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-
-/* Buttons */
-.v2 .cta{
-  display:inline-block; padding:10px 16px; border-radius:10px;
-  background:var(--accent); color:#fff; text-decoration:none;
-  transition:filter .2s ease;
-}
-.v2 .cta.alt{background:#111}
-.v2 .cta:hover{filter:saturate(1.1) brightness(1.02)}
-
-/* Sections, Cards, Grids */
-.v2 .section{padding:32px 0}
-.v2 h2{
-  margin:12px 0 10px; font-size:clamp(22px,3vw,28px);
-  position:relative; padding-left:12px;
-}
-.v2 h2::before{
-  content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px;
-  background:linear-gradient(180deg,var(--mint),var(--gold)); border-radius:4px;
-}
-
-/* OPTIONAL: gradient headings (uncomment to enable)
-.v2 .card h2, .v2 .section > h2 {
-  background: linear-gradient(90deg, var(--mint), var(--gold));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-*/
-
-.v2 .grid{display:grid;gap:16px}
-@media (min-width:780px){
-  .v2 .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-  .v2 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-}
-
-.v2 .card{
-  border:1px solid var(--border); border-radius:var(--radius);
-  background:var(--card); box-shadow:var(--shadow); padding:16px;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.v2 .card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.12);
-}
-
-.v2 .muted{color:var(--muted)}
-.v2 .inline{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-.v2 .book-cover{ max-width:200px; border-radius:8px; box-shadow:0 8px 20px rgba(0,0,0,.08); display:block; }
-
-/* Branded section tints (apply via HTML classes) */
-.v2 .bg-mint{ background: color-mix(in srgb, var(--mint) 22%, white); }
-.v2 .bg-gold{ background: color-mix(in srgb, var(--gold) 22%, white); }
-/* Fallback if color-mix unsupported */
-@supports not (background: color-mix(in srgb, white, black)) {
-  .v2 .bg-mint{ background: rgba(193,216,192,0.20); }
-  .v2 .bg-gold{ background: rgba(241,213,154,0.20); }
-}
-
-/* Footer + full-width swoosh */
-.v2 footer{
-  background:linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%);
-  border-top:none; padding:32px 0 0; margin-top:28px;
-}
-.v2 .mini{font-size:14px;color:var(--muted)}
-.v2 .footer-links a{color:var(--muted);text-decoration:none;margin-right:10px}
-
-.v2 footer .swoosh{ width:100%; margin-top:16px; }
-.v2 footer .swoosh img{ display:block; width:100%; height:auto; }
-
-/* =======================
-   Book Motif Carousel
-   ======================= */
-.v2 .btg-carousel{
-  --mint:#C1D8C0; --gold:#F1D59A; --accent:#0070C0;
-  --radius:18px; --shadow:0 8px 24px rgba(0,0,0,.10);
-  --book-w:500px; --book-h:320px;
-  --content-w:440px; --content-h:260px;
-  --spine-gap:20px; --page-pad:14px;
-}
-.v2 .btg-carousel .frame{max-width:1180px;margin:0 auto;padding:clamp(16px,3vw,40px)}
-.v2 .btg-carousel .slide-card{
-  position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);
-  padding:clamp(14px,2.6vw,24px);background:linear-gradient(180deg,var(--mint),var(--gold));
-  display:flex;align-items:center;justify-content:center;min-height:calc(var(--book-h) + 64px)
-}
-.v2 .btg-carousel .swiper-slide:nth-child(even) .slide-card{
-  background:linear-gradient(180deg,var(--gold),var(--mint));
-}
-.v2 .btg-carousel .slide-card::before{
-  content:"";position:absolute;left:50%;top:50%;width:var(--book-w);height:var(--book-h);
-  transform:translate(-50%,-50%);
-  background:url("/assets/open-blank-pages-in-an-old-book-free-vector.jpg") center/contain no-repeat;
-  z-index:0;
-}
-.v2 .btg-carousel .page-grid{
-  position:absolute;left:50%;top:50%;width:var(--content-w);height:var(--content-h);
-  transform:translate(-50%,-50%);display:grid;grid-template-columns:1fr 1fr;
-  column-gap:var(--spine-gap);padding:var(--page-pad);z-index:1;box-sizing:border-box;background:transparent
-}
-.v2 .btg-carousel .page-left{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start}
-.v2 .btg-carousel .page-right{display:flex;align-items:center;justify-content:center}
-.v2 .btg-carousel .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
-.v2 .btg-carousel .page-left h2{margin:0 0 8px;font-size:22px;line-height:1.25;color:#111;font-weight:700}
-.v2 .btg-carousel .page-left p{margin:0;font-size:16px;line-height:1.4;color:#222;font-style:italic}
-.v2 .btg-carousel .page-right img{
-  max-width:95%;max-height:95%;object-fit:contain;border-radius:10px;background:#fff;padding:6px;
-  box-shadow:0 6px 16px rgba(0,0,0,.10);display:block
-}
-.v2 .btg-carousel .swiper{width:100%}
-.v2 .btg-carousel .swiper-button-next,.v2 .btg-carousel .swiper-button-prev{color:#333;filter:drop-shadow(0 2px 8px rgba(0,0,0,.12))}
-.v2 .btg-carousel .swiper-pagination-bullet{background:#333;opacity:.5}
-.v2 .btg-carousel .swiper-pagination-bullet-active{background:#0070C0;opacity:1}
-@media (max-width:640px){
-  .v2 .btg-carousel{ --book-w:560px; --book-h:360px; --content-w:480px; --content-h:300px; --spine-gap:20px; --page-pad:16px; }
-  .v2 .btg-carousel .page-left h2{font-size:20px}
-  .v2 .btg-carousel .page-left p{font-size:15px}
-}
-@media (max-width:480px){
-  .v2 .btg-carousel{ --book-w:440px; --book-h:280px; --content-w:360px; --content-h:240px; --spine-gap:16px; --page-pad:14px; }
-  .v2 .btg-carousel .page-left h2{font-size:18px}
-  .v2 .btg-carousel .page-left p{font-size:14px}
-}
-/* Branded card tints - darker for more contrast */
-.v2 .bg-mint .card {
-  background: color-mix(in srgb, white 75%, var(--mint));
-}
-.v2 .bg-gold .card {
-  background: color-mix(in srgb, white 75%, var(--gold));
-}
-
-/* Fallback if color-mix not supported */
-@supports not (background: color-mix(in srgb, white, black)) {
-  .v2 .bg-mint .card { background: rgba(193,216,192,0.35); }
-  .v2 .bg-gold .card { background: rgba(241,213,154,0.35); }
-}
-
-/* Stronger shadow + lift */
-.v2 .card {
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* darker shadow */
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.v2 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.22); /* more dramatic hover */
-}
-/* --- Card Background + Shadow (stronger) --- */
-.v2 .bg-mint .card {
-  background: color-mix(in srgb, white 75%, var(--mint));
-}
-.v2 .bg-gold .card {
-  background: color-mix(in srgb, white 75%, var(--gold));
-}
-@supports not (background: color-mix(in srgb, white, black)) {
-  .v2 .bg-mint .card { background: rgba(193,216,192,0.35); }
-  .v2 .bg-gold .card { background: rgba(241,213,154,0.35); }
-}
-
-.v2 .card {
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.v2 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.22);
-}
-
-/* --- Accent Style 1: Gradient top border strip --- */
-.v2 .card {
-  border-top: 5px solid transparent;
-  border-image: linear-gradient(90deg, var(--mint), var(--gold)) 1;
-}
-
-/* --- Accent Style 2: Gradient heading text --- */
-.v2 .card h2 {
-  background: linear-gradient(90deg, var(--mint), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-/* Stronger blog post title color */
-.v2 .post h2 {
-  color: #0b0b0b; /* darker than var(--ink) */
-  font-weight: 800;
-}
-
-/* Optional: make blog links darker too */
-.v2 .post h2 a {
-  color: #0b0b0b;
-  text-decoration: none;
-}
-.v2 .post h2 a:hover {
-  text-decoration: underline;
-}
-/* --- Blog titles: force dark, readable on tinted cards --- */
-.v2 .post h2,
-.v2 .post h2 a,
-.v2 .post h2 a:visited {
-  color: #0b0b0b !important;   /* win over global link color */
-  -webkit-text-fill-color: #0b0b0b !important; /* defeat any gradient text */
-  text-decoration: none;
-  font-weight: 800;
-}
-.v2 .post h2 a:hover { text-decoration: underline; }
-
-/* --- Restrict gradient heading style to NON-blog cards --- */
-/* If you enabled the gradient heading earlier for all .card h2, swap it for this selector: */
-.v2 .card:not(.post) h2 {
-  background: linear-gradient(90deg, var(--mint), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-/* Contact form */
-.v2 .contact-form .row{display:grid;gap:14px}
-@media(min-width:720px){ .v2 .contact-form .row{grid-template-columns:1fr 1fr} }
-
-.v2 .contact-form .field{display:flex;flex-direction:column;gap:6px}
-.v2 .contact-form label{font-weight:600}
-.v2 .contact-form .req{color:#b91c1c;margin-left:4px}
-
-.v2 .contact-form input[type="text"],
-.v2 .contact-form input[type="email"],
-.v2 .contact-form select,
-.v2 .contact-form textarea{
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:10px 12px;
-  background:#fff;
-  font:inherit;
-  color:var(--ink);
-  outline:none;
-  transition:border-color .15s ease, box-shadow .15s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.v2 .contact-form textarea{resize:vertical}
-.v2 .contact-form input:focus,
-.v2 .contact-form select:focus,
-.v2 .contact-form textarea:focus{
-  border-color:#99b59a; /* mint-ish focus */
-  box-shadow:0 0 0 3px rgba(193,216,192,.35);
-}
-.v2 .contact-form .hp{position:absolute !important;left:-9999px !important;opacity:0 !important}
-/* Compact section padding for shorter content blocks */
-#about.section,
-#speaking.section,
-#consulting.section {
-  padding: 20px 0; /* tighter than the default 32px */
-}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About / Contact — Sudhir C. Mehta</title>
-  <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=12"/>
-</head>
-<body class="v2">
-
-  <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Sudhir C. Mehta"/>
-        <span>Sudhir C. Mehta</span>
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="book-publications.html">Book & Publications</a>
-        <a href="about-contact.html">About / Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- About (mint) -->
-  <section class="section bg-mint" id="about">
-    <div class="wrap">
-      <h1 style="margin-top:0">About & Contact</h1>
-      <h2>About</h2>
-      <p>Sudhir C. Mehta is a scholar-practitioner in entrepreneurship and fintech, focused on how founders and teams succeed. With 30+ years as an operator and advisor, he blends research and practice to help leaders scale with clarity, trust, and cadence.</p>
-      <p class="muted">DBA • FinTech executive • Educator • Author of <em>Beyond the Garage</em></p>
-    </div>
-  </section>
-
-  <!-- Speaking (gold) -->
-  <section class="section bg-gold" id="speaking">
-    <div class="wrap">
-      <h2>Speaking</h2>
-      <p>Keynotes and guest lectures for founder/VC events, MBA & Exec-Ed, and corporate offsites. Topics: co-founder fit, early hiring, operating cadence, culture at scale.</p>
-      <p><a class="cta" href="#contact">Invite me to speak</a></p>
-    </div>
-  </section>
-
-  <!-- Consulting (mint) -->
-  <section class="section bg-mint" id="consulting">
-    <div class="wrap">
-      <h2>Consulting</h2>
-      <p>Lightweight advisory for founders and leadership teams — clarify roles and incentives, align on decision rights, and build momentum without bureaucracy.</p>
-      <p><a class="cta alt" href="#contact">Discuss an engagement</a></p>
-    </div>
-  </section>
-
-  <!-- Contact (gold) with form -->
-  <section class="section bg-gold" id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-
-      <div class="grid cols-2" style="align-items:start">
-        <!-- Form card -->
-        <div class="card">
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-            <div class="row">
-              <div class="field">
-                <label for="name">Name<span aria-hidden="true" class="req">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name" />
-              </div>
-              <div class="field">
-                <label for="email">Email<span aria-hidden="true" class="req">*</span></label>
-                <input type="email" id="email" name="_replyto" required autocomplete="email" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="field">
-                <label for="org">Organization <span class="muted">(optional)</span></label>
-                <input type="text" id="org" name="organization" autocomplete="organization" />
-              </div>
-              <div class="field">
-                <label for="topic">I’m interested in…</label>
-                <select id="topic" name="topic">
-                  <option value="" selected>Select a topic</option>
-                  <option>Speaking</option>
-                  <option>Consulting</option>
-                  <option>Workshop/Advisory</option>
-                  <option>Research/Publication</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="message">How can I help?</label>
-              <textarea id="message" name="message" rows="6"></textarea>
-            </div>
-
-            <!-- Honeypot (spam trap) -->
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true"/>
-
-            <button type="submit" class="cta">Send message</button>
-            <div class="muted" style="margin-top:10px">I typically reply within 1–2 business days.</div>
-          </form>
-        </div>
-
-        <!-- Side info card -->
-        <div class="card">
-          <h3 style="margin-top:0">Ways to connect</h3>
-          <p>Email: <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a><br/>
-             LinkedIn: <a href="https://www.linkedin.com/in/sudhircmehta" target="_blank" rel="noopener">/in/sudhircmehta</a></p>
-          <p class="muted">Topics: Founder dynamics, operating cadence, first 10 hires, culture at scale, FinTech transformation, AI &amp; trust.</p>
-          <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
-          <h3 style="margin-top:0">Advisory • Workshops • Speaking</h3>
-          <p>Let’s work on the hard stuff. Tell me where you want momentum: founder alignment, hiring, cadence, culture, or FinTech transformation.</p>
-          <p class="muted">Prefer email? <a href="mailto:hello@sudhircmehta.com">hello@sudhircmehta.com</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="mini">© <script>document.write(new Date().getFullYear())</script> Sudhir C. Mehta</div>
-    </div>
-    <div class="swoosh">
-      <img src="assets/Swoosh.png" alt="Brand swoosh">
-    </div>
-  </footer>
-
-</body>
-</html>
-/* =========================
-   CTA BUTTON SYSTEM
-   ========================= */
-.v2 .cta { 
-  --cta-bg: var(--accent);
-  --cta-fg: #fff;
-  --cta-bd: transparent;
-  display:inline-block; border-radius:12px; padding:12px 18px;
-  font-weight:700; text-decoration:none; 
-  background: var(--cta-bg); color: var(--cta-fg); border:1px solid var(--cta-bd);
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease, background .15s ease;
-  box-shadow: 0 6px 14px rgba(0,0,0,.12);
-}
-.v2 .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.18); }
-
-/* Hierarchy */
-.v2 .cta.primary { --cta-bg: var(--accent); --cta-fg:#fff; --cta-bd: transparent; }
-.v2 .cta.secondary { --cta-bg:#111; --cta-fg:#fff; --cta-bd: transparent; }
-.v2 .cta.ghost { --cta-bg:transparent; --cta-fg:#111; --cta-bd: #C9CDD3; box-shadow:none; }
-.v2 .cta.ghost:hover { background: rgba(0,0,0,.04); }
-
-/* Size variant (optional) */
-.v2 .cta.sm { padding:10px 14px; border-radius:10px; font-weight:700; }
-.v2 .cta.lg { padding:14px 20px; border-radius:14px; font-weight:800; }
-
-/* Space between stacked CTAs */
-.v2 .cta + .cta { margin-left:10px; }
-
-/* =========================
-   BLOG TAG "PILLS"
-   ========================= */
-.v2 .tags { margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
-.v2 .tag {
-  display:inline-flex; align-items:center; gap:6px;
-  padding:6px 10px; border-radius:999px; font-size:14px; font-weight:600;
-  background: #fff; color:#111; border:1px solid rgba(0,0,0,.08);
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
-}
-.v2 .tag::before { content:"#"; opacity:.55; }
-
-/* Mint/Gold contextual tags (optional, auto when inside a tinted band) */
-.v2 .bg-mint .tag { background: color-mix(in srgb, white 70%, var(--mint)); }
-.v2 .bg-gold .tag { background: color-mix(in srgb, white 70%, var(--gold)); }
-@supports not (background: color-mix(in srgb, white, black)) {
-  .v2 .bg-mint .tag { background: rgba(193,216,192,.30); }
-  .v2 .bg-gold .tag { background: rgba(241,213,154,.30); }
-}
-
-/* =========================
-   STRONGER SECTION TINTS
-   ========================= */
-.v2 .bg-mint{ background: color-mix(in srgb, white 70%, var(--mint)); }
-.v2 .bg-gold{ background: color-mix(in srgb, white 70%, var(--gold)); }
-@supports not (background: color-mix(in srgb, white, black)) {
-  .v2 .bg-mint{ background: rgba(193,216,192,.40); }
-  .v2 .bg-gold{ background: rgba(241,213,154,.40); }
-}
-
-/* Ensure blog titles stay dark over stronger tints */
-.v2 .post h2, .v2 .post h2 a, .v2 .post h2 a:visited {
-  color:#0b0b0b !important; -webkit-text-fill-color:#0b0b0b !important; text-decoration:none; font-weight:800;
-}
-.v2 .post h2 a:hover { text-decoration:underline; }
-/* ===== Mobile nav fix: wrap links + remove sideways scroll ===== */
-
-/* Make sure the page never scrolls sideways */
-html, body { overflow-x: hidden; }
-
-/* Fill off-canvas background with your brand gradient (iOS drag) */
-html, body.v2 {
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+html, body.v2{
   background: linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%);
 }
+html, body{ overflow-x:hidden; }
 
-/* Header rows can wrap on small screens */
-.v2 header .wrap { display: flex; flex-wrap: wrap; }
-
-/* Brand on its own row, then the nav below on phones */
-@media (max-width: 768px) {
-  .v2 header .brand { flex: 1 1 100%; margin-bottom: 6px; }
-
-  .v2 header .nav {
-    flex: 1 1 100%;
-    display: flex;
-    flex-wrap: wrap;          /* allow wrapping instead of overflow */
-    gap: 8px 16px;            /* row/column gaps */
-    justify-content: flex-start;
-  }
-
-  /* Ensure links can break and shrink a bit */
-  .v2 header .nav a {
-    white-space: normal !important;   /* override any nowrap */
-    font-size: 16px;                   /* slightly smaller on mobile */
-    line-height: 1.2;
-  }
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--ink);
+  line-height:1.55;
 }
 
-/* Safety net: if something still pushes width, allow soft scroll but hide scrollbar */
-@media (max-width: 420px) {
-  .v2 header .nav {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .v2 header .nav::-webkit-scrollbar { display: none; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:#0b4a3a; }
+a:hover{ text-decoration: underline; }
+
+/* Layout helpers */
+.wrap{ width: min(1100px, 92%); margin: 0 auto; }
+.section{ padding:32px 0; }
+.grid{ display:grid; gap:18px; }
+.cols-2{ grid-template-columns: 1fr; }
+@media(min-width: 900px){ .cols-2{ grid-template-columns: 1fr 1fr; } }
+
+.inline{ display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; }
+.inline > img{ width:140px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,.12); }
+
+.muted{ color: var(--muted); }
+.mini{ font-size: 13px; color: var(--muted); }
+
+/* Tinted bands with extra contrast */
+.bg-mint{ background: color-mix(in srgb, white 70%, var(--mint)); }
+.bg-gold{ background: color-mix(in srgb, white 70%, var(--gold)); }
+@supports not (background: color-mix(in srgb, white, black)) {
+  .bg-mint{ background: rgba(193,216,192,.40); }
+  .bg-gold{ background: rgba(241,213,154,.40); }
 }
-/* ====== HAMBURGER NAV ====== */
 
-/* structure */
-.v2 .header-row { display:flex; align-items:center; justify-content:space-between; }
+/* Cards */
+.card{
+  background: var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+.card h2{ margin-top:4px; margin-bottom:8px; }
 
-/* toggle button (hidden on desktop) */
-.v2 .nav-toggle {
+/* Hero */
+.hero{ padding: 36px 0 20px; }
+.hero .lead{ font-size: 1.1rem; color: var(--muted); }
+.cta-row{ margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Book cover */
+.book-cover{ width:160px; border-radius:10px; }
+
+/* Footer / Swoosh */
+footer{ padding: 20px 0 0; }
+footer .swoosh{ margin-top: 16px; }
+footer .swoosh img{ width:100%; height:auto; display:block; opacity:.95; }
+
+/* ========== Header / Brand / Nav ========== */
+header{ padding: 12px 0 8px; }
+.header-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.brand{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:inherit; font-weight:800; font-size: 20px; }
+.brand img{ width:64px; height:auto; }
+
+/* Desktop nav */
+.desktop-nav{ display:flex; gap:22px; align-items:center; }
+.desktop-nav a{ text-decoration:none; font-weight:700; }
+.desktop-nav a:hover{ text-decoration:underline; }
+
+/* Mobile overlay menu (hamburger) */
+.nav-toggle{
   display:none; border:0; background:transparent; padding:8px; margin-left:auto;
-  border-radius:10px; line-height:0; color:#0f172a;  /* dark ink */
+  border-radius:10px; line-height:0; color:#0f172a;
 }
-.v2 .nav-toggle:focus-visible { outline: 3px solid rgba(15,23,42,.25); outline-offset: 3px; }
+.nav-toggle:focus-visible{ outline:3px solid rgba(15,23,42,.25); outline-offset:3px; }
 
-/* mobile: collapse nav behind toggle */
-@media (max-width: 768px) {
-  .v2 .nav-toggle { display:inline-flex; }
+@media(max-width:768px){
+  .desktop-nav{ display:none; }
+  .nav-toggle{ display:inline-flex; }
 
-  .v2 .nav {
-    position: relative;
-    flex-basis: 100%;
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    max-height: 0;                 /* collapsed */
-    transition: max-height .25s ease;
-    margin-top: 6px;
+  .mobile-menu{
+    position:fixed; inset:0; z-index:9999; display:none;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--mint) 65%, white 35%) 0%, color-mix(in srgb, var(--gold) 65%, white 35%) 100%);
+    backdrop-filter: blur(6px);
   }
+  .mobile-menu.open{ display:block; }
 
-  /* vertical stack of links */
-  .v2 .nav a {
-    display:block;
-    padding:10px 0;
-    border-top: 1px solid rgba(0,0,0,.06);
-    white-space: normal !important;
+  .mobile-menu-panel{
+    position:absolute; top:0; left:0; right:0;
+    background: rgba(255,255,255,0.85);
+    border-bottom:1px solid rgba(0,0,0,.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    transform: translateY(-100%);
+    transition: transform .25s ease;
+    border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;
   }
+  .mobile-menu.open .mobile-menu-panel{ transform: translateY(0); }
 
-  /* opened state */
-  .v2 .nav.open { max-height: 320px; }  /* fits 4–6 links; increase if needed */
+  .mobile-menu-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 18px; font-weight:800; font-size:18px;
+  }
+  .nav-close{ border:0; background:transparent; padding:6px; border-radius:10px; }
+  .nav-close:focus-visible{ outline:3px solid rgba(15,23,42,.25); outline-offset:3px; }
 
-  /* keep gradient behind any overscroll */
-  html, body.v2 { background: linear-gradient(180deg, var(--mint) 0%, var(--gold) 100%); }
+  .mobile-links{ display:flex; flex-direction:column; padding:6px 18px 18px; }
+  .mobile-links a{
+    display:block; padding:14px 6px; font-weight:700; font-size:18px;
+    border-top:1px solid rgba(0,0,0,.06); text-decoration:none; color:#0b0b0b;
+  }
+}
+html.noscroll, body.noscroll{ overflow:hidden; }
+
+/* ========== CTAs ========== */
+.cta{
+  --cta-bg: var(--accent); --cta-fg:#fff; --cta-bd: transparent;
+  display:inline-block; border-radius:12px; padding:12px 18px; font-weight:700; text-decoration:none;
+  background: var(--cta-bg); color: var(--cta-fg); border:1px solid var(--cta-bd);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+.cta:hover{ transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.18); }
+.cta.primary{ --cta-bg: var(--accent); --cta-fg:#fff; }
+.cta.secondary{ --cta-bg:#111; --cta-fg:#fff; }
+.cta.ghost{ --cta-bg:transparent; --cta-fg:#111; --cta-bd:#C9CDD3; box-shadow:none; }
+.cta.ghost:hover{ background: rgba(0,0,0,.04); }
+.cta + .cta{ margin-left:10px; }
+
+/* ========== Blog tags / titles ========== */
+.tags{ margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
+.tag{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:999px; font-size:14px; font-weight:600;
+  background:#fff; color:#111; border:1px solid rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.tag::before{ content:"#"; opacity:.55; }
+
+.bg-mint .tag{ background: color-mix(in srgb, white 70%, var(--mint)); }
+.bg-gold .tag{ background: color-mix(in srgb, white 70%, var(--gold)); }
+@supports not (background: color-mix(in srgb, white, black)) {
+  .bg-mint .tag{ background: rgba(193,216,192,.30); }
+  .bg-gold .tag{ background: rgba(241,213,154,.30); }
 }
 
-/* reduce motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .v2 .nav { transition: none !important; }
+/* Force dark blog titles on tinted cards */
+.post h2, .post h2 a, .post h2 a:visited{
+  color:#0b0b0b !important; -webkit-text-fill-color:#0b0b0b !important; text-decoration:none; font-weight:800;
 }
+.post h2 a:hover{ text-decoration:underline; }
+
+/* ========== Contact form ========== */
+.contact-form .row{ display:grid; gap:14px; }
+@media(min-width:720px){ .contact-form .row{ grid-template-columns: 1fr 1fr; } }
+.contact-form .field{ display:flex; flex-direction:column; gap:6px; }
+.contact-form label{ font-weight:600; }
+.contact-form .req{ color:#b91c1c; margin-left:4px; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea{
+  border:1px solid var(--border); border-radius:10px; padding:10px 12px;
+  background:#fff; color:var(--ink); font:inherit; outline:none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.contact-form textarea{ resize:vertical; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
+  border-color:#99b59a; box-shadow:0 0 0 3px rgba(193,216,192,.35);
+}
+.contact-form .hp{ position:absolute !important; left:-9999px !important; opacity:0 !important; }
+
+/* ========== Compact bands for short sections (About/Speaking/Consulting) ========== */
+#about.section, #speaking.section, #consulting.section{ padding: 8px 0; }
+#about.section .wrap, #speaking.section .wrap, #consulting.section .wrap{ max-width:680px; margin:0 auto; }
+#about.section h1{ margin-bottom:6px; }
+#about.section h2, #speaking.section h2, #consulting.section h2{ margin:8px 0; }
+#about.section p, #speaking.section p, #consulting.section p{ margin-bottom:10px; }
